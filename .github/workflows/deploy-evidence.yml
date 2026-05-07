@@ -71,11 +71,9 @@ jobs:
         run: npm run sources
 
       - name: Build Evidence static site
+        # Base path for GitHub Pages is set in bi/evidence.config.yaml under
+        # `deployment.basePath` — Evidence reads it from there, not from env.
         working-directory: bi
-        env:
-          # Subpath where this site is served — `<repo>/` for project pages.
-          # Comment out / blank if deploying to a custom domain at root.
-          BASE_PATH: /D2C-Data-Stack
         run: npm run build
 
       - name: Upload Pages artifact

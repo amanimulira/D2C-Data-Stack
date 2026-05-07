@@ -58,6 +58,12 @@ theme:
       light: "#dc2626"
       dark: "#f87171"
 
+deployment:
+  # GitHub Pages serves project pages at https://<user>.github.io/<repo>/, so
+  # all asset URLs must be prefixed with /<repo>. Update this to match your
+  # repo name when forking. Set to '' if deploying to a custom domain at root.
+  basePath: /D2C-Data-Stack
+
 plugins:
   components:
     # This loads all of evidence's core charts and UI components
