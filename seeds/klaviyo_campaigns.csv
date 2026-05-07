@@ -1,0 +1,5 @@
+campaign_id,name,subject_line,channel,sent_at,recipient_count
+camp_001,February Welcome Series,Welcome to the family,email,2026-02-02 09:00:00,5
+camp_002,March Restock Reminder,Time to restock your favorites,email,2026-03-04 09:00:00,8
+camp_003,April Loyalty Discount,A thank you from us — 10% off,email,2026-04-01 09:00:00,10
+camp_004,April SMS Flash,24h flash sale — your code inside,sms,2026-04-15 12:00:00,7

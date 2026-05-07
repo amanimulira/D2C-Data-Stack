@@ -1,0 +1,47 @@
+version: 2
+
+models:
+  - name: stg_klaviyo__events
+    description: |
+      Profile event stream with a controlled-vocabulary `event_type` column derived
+      from Klaviyo's free-text `event_name`. `Placed Order` events carry the order
+      subtotal in `event_value` and link back to Shopify via `attributed_order_id`.
+    columns:
+      - name: event_id
+        tests: [unique, not_null]
+      - name: email
+        tests: [not_null]
+        meta: {contains_pii: true}
+      - name: event_type
+        tests:
+          - accepted_values:
+              values: [placed_order, started_checkout, received_email, opened_email, clicked_email, received_sms, subscribed_to_list]
+      - name: event_value
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between: { min_value: 0 }
+      - name: message_source
+        description: Whether the event originated from a `campaign`, a triggered `flow`, or `other`.
+
+  - name: stg_klaviyo__campaigns
+    columns:
+      - name: campaign_id
+        tests: [unique, not_null]
+      - name: channel
+        tests:
+          - accepted_values: { values: [email, sms] }
+
+  - name: stg_klaviyo__flows
+    columns:
+      - name: flow_id
+        tests: [unique, not_null]
+      - name: status
+        tests:
+          - accepted_values: { values: [active, draft, archived] }
+
+  - name: stg_klaviyo__profiles
+    columns:
+      - name: profile_id
+        tests: [unique, not_null]
+      - name: email
+        tests: [not_null]
+        meta: {contains_pii: true}

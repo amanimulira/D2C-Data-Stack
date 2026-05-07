@@ -1,0 +1,126 @@
+name: 'd2c_stack'
+version: '1.0.0'
+config-version: 2
+
+profile: 'd2c_stack'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+vars:
+  start_date: '2026-01-01'
+  end_date:   '2026-12-31'
+  fx_default_currency: 'USD'
+
+seeds:
+  d2c_stack:
+    shopify_orders:
+      +schema: raw_shopify
+      +column_types:
+        created_at: 'timestamp'
+        processed_at: 'timestamp'
+        total_price: 'numeric(12,2)'
+        subtotal_price: 'numeric(12,2)'
+        total_tax: 'numeric(12,2)'
+        total_discounts: 'numeric(12,2)'
+        total_shipping: 'numeric(12,2)'
+    shopify_order_lines:
+      +schema: raw_shopify
+      +column_types:
+        price: 'numeric(12,2)'
+        quantity: 'integer'
+        total_discount: 'numeric(12,2)'
+    shopify_customers:
+      +schema: raw_shopify
+      +column_types:
+        phone: 'varchar'
+        created_at: 'timestamp'
+        updated_at: 'timestamp'
+        accepts_marketing: 'boolean'
+    shopify_products:
+      +schema: raw_shopify
+      +column_types:
+        price: 'numeric(12,2)'
+        cost: 'numeric(12,2)'
+        created_at: 'timestamp'
+    shopify_refunds:
+      +schema: raw_shopify
+      +column_types:
+        created_at: 'timestamp'
+        refund_amount: 'numeric(12,2)'
+    klaviyo_events:
+      +schema: raw_klaviyo
+      +column_types:
+        event_at: 'timestamp'
+        event_value: 'numeric(12,2)'
+    klaviyo_campaigns:
+      +schema: raw_klaviyo
+      +column_types:
+        sent_at: 'timestamp'
+    klaviyo_flows:
+      +schema: raw_klaviyo
+    klaviyo_profiles:
+      +schema: raw_klaviyo
+      +column_types:
+        created_at: 'timestamp'
+        accepts_marketing: 'boolean'
+    meta_ads_campaigns:
+      +schema: raw_meta_ads
+      +column_types:
+        created_at: 'timestamp'
+        daily_budget: 'numeric(12,2)'
+    meta_ads_ad_sets:
+      +schema: raw_meta_ads
+      +column_types:
+        created_at: 'timestamp'
+    meta_ads_ads:
+      +schema: raw_meta_ads
+      +column_types:
+        created_at: 'timestamp'
+    meta_ads_ad_insights:
+      +schema: raw_meta_ads
+      +column_types:
+        date_day: 'date'
+        spend: 'numeric(12,2)'
+        impressions: 'integer'
+        clicks: 'integer'
+        reported_conversions: 'integer'
+        reported_conversion_value: 'numeric(12,2)'
+    ga4_events:
+      +schema: raw_ga4
+      +column_types:
+        event_timestamp: 'timestamp'
+        event_value: 'numeric(12,2)'
+        items_count: 'integer'
+        ga_session_number: 'integer'
+    countries:
+      +schema: raw_reference
+
+models:
+  d2c_stack:
+    +persist_docs:
+      relation: true
+      columns: true
+    staging:
+      +materialized: view
+      +schema: staging
+    intermediate:
+      +materialized: ephemeral
+      +schema: intermediate
+    marts:
+      +materialized: table
+      +schema: marts
+      core:
+        +schema: marts_core
+      marketing:
+        +schema: marts_marketing
+      customer:
+        +schema: marts_customer

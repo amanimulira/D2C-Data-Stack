@@ -1,0 +1,4 @@
+name: d2c_stack
+type: duckdb
+options:
+  filename: ../../../d2c_stack.duckdb

@@ -1,0 +1,72 @@
+version: 2
+
+models:
+  - name: dim_dates
+    description: Daily calendar between `start_date` and `end_date` project vars. Joined to fact tables for time-series analysis.
+    columns:
+      - name: date_day
+        tests: [unique, not_null]
+
+  - name: dim_customers
+    description: |
+      Customer dimension with identity, geography, marketing-consent, and
+      lifetime-value rollup. The grain is one row per Shopify customer.
+    columns:
+      - name: customer_id
+        tests: [unique, not_null]
+      - name: customer_sk
+        description: Surrogate key (md5 hash) for use as a stable join key in BI tools.
+        tests: [unique, not_null]
+      - name: email
+        tests: [not_null]
+        meta: {contains_pii: true}
+      - name: lifetime_order_count
+        tests: [not_null]
+      - name: acquisition_source
+        description: First-order UTM source — the channel that owns this customer for cohort/CAC reporting.
+
+  - name: dim_products
+    columns:
+      - name: product_id
+        tests: [unique, not_null]
+      - name: product_sk
+        tests: [unique, not_null]
+      - name: product_margin_pct
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between: { min_value: 0, max_value: 1 }
+
+  - name: fct_orders
+    description: |
+      Order-grain fact. One row per Shopify order with refund-net revenue,
+      summed line-item COGS, and contribution margin. Materialized incrementally
+      on `processed_at` so refund events to historical orders propagate.
+    columns:
+      - name: order_id
+        tests: [unique, not_null]
+      - name: customer_id
+        tests:
+          - not_null
+          - relationships: { to: ref('dim_customers'), field: customer_id }
+      - name: net_subtotal_after_refunds
+        tests: [not_null]
+      - name: order_cogs
+        tests: [not_null]
+      - name: contribution_margin
+        tests: [not_null]
+      - name: contribution_margin_pct
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between: { min_value: -1, max_value: 1 }
+
+  - name: fct_order_items
+    description: Line-grain fact for product-mix and per-SKU margin reporting.
+    columns:
+      - name: order_line_id
+        tests: [unique, not_null]
+      - name: order_id
+        tests:
+          - relationships: { to: ref('fct_orders'), field: order_id }
+      - name: product_id
+        tests:
+          - relationships: { to: ref('dim_products'), field: product_id }
+      - name: line_gross_margin
+        tests: [not_null]

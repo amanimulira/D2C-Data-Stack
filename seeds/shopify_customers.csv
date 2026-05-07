@@ -1,0 +1,11 @@
+customer_id,email,first_name,last_name,phone,country_code,accepts_marketing,created_at,updated_at
+c_001,maya.chen@example.com,Maya,Chen,+14155550101,US,true,2026-01-28 10:14:00,2026-04-08 12:00:00
+c_002,liam.patel@example.com,Liam,Patel,+14155550102,US,true,2026-02-04 09:22:00,2026-04-20 12:00:00
+c_003,aisha.okafor@example.com,Aisha,Okafor,+442075550103,GB,true,2026-02-06 18:45:00,2026-04-11 12:00:00
+c_004,noah.rivera@example.com,Noah,Rivera,+14155550104,US,true,2026-02-09 14:03:00,2026-04-14 12:00:00
+c_005,priya.singh@example.com,Priya,Singh,+919155550105,IN,false,2026-02-11 11:30:00,2026-04-17 12:00:00
+c_006,jonas.mueller@example.com,Jonas,Müller,+493055550106,DE,true,2026-02-13 16:18:00,2026-04-29 12:00:00
+c_007,sofia.rossi@example.com,Sofia,Rossi,+390255550107,IT,true,2026-02-21 20:55:00,2026-04-23 12:00:00
+c_008,kenji.tanaka@example.com,Kenji,Tanaka,+813055550108,JP,true,2026-02-27 07:42:00,2026-04-26 12:00:00
+c_009,amara.diallo@example.com,Amara,Diallo,+14155550109,US,true,2026-03-01 13:09:00,2026-04-02 12:00:00
+c_010,eleanor.wright@example.com,Eleanor,Wright,+14155550110,US,true,2026-03-07 19:00:00,2026-04-05 12:00:00

@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: stg_ga4__events
+    description: |
+      Cleaned GA4 events. Empty source/medium/campaign normalized to the GA4
+      placeholder vocabulary (`(direct)` / `(none)` / `(not set)`).
+    columns:
+      - name: event_id
+        tests: [unique, not_null]
+      - name: event_name
+        tests:
+          - not_null
+          - accepted_values:
+              values: [session_start, page_view, view_item, add_to_cart, begin_checkout, purchase, scroll, click, user_engagement]
+
+  - name: stg_ga4__sessions
+    description: |
+      Sessionized event stream. One row per `(user_pseudo_id, session_id)`. The
+      session's first observed source/medium/campaign drives channel attribution.
+    columns:
+      - name: session_id
+        tests: [not_null]
+      - name: user_pseudo_id
+        tests: [not_null]
+      - name: session_started_at
+        tests: [not_null]
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns: [user_pseudo_id, session_id]

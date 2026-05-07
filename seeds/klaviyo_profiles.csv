@@ -1,0 +1,11 @@
+profile_id,email,created_at,accepts_marketing,country_code
+kp_001,maya.chen@example.com,2026-01-28 09:50:00,true,US
+kp_002,liam.patel@example.com,2026-02-04 09:00:00,true,US
+kp_003,aisha.okafor@example.com,2026-02-06 18:30:00,true,GB
+kp_004,noah.rivera@example.com,2026-02-09 13:50:00,true,US
+kp_005,priya.singh@example.com,2026-02-11 11:20:00,false,IN
+kp_006,jonas.mueller@example.com,2026-02-13 16:00:00,true,DE
+kp_007,sofia.rossi@example.com,2026-02-21 20:40:00,true,IT
+kp_008,kenji.tanaka@example.com,2026-02-27 07:30:00,true,JP
+kp_009,amara.diallo@example.com,2026-03-01 13:00:00,true,US
+kp_010,eleanor.wright@example.com,2026-03-07 18:45:00,true,US

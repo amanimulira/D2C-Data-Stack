@@ -1,0 +1,44 @@
+version: 2
+
+models:
+  - name: int_orders__joined
+    description: |
+      Order-grain enrichment used by every order-related mart. Joins orders to
+      customers and rolls up refunds per order into a single `refund_amount`
+      column. `net_subtotal_after_refunds` is the canonical revenue metric.
+    columns:
+      - name: order_id
+        tests: [unique, not_null]
+      - name: customer_id
+        tests: [not_null]
+      - name: net_subtotal_after_refunds
+        tests:
+          - not_null
+
+  - name: int_marketing__unified_spend
+    description: Long-form daily spend at (date, platform, campaign) grain. Currently sources Meta Ads only — extend the `unioned_marketing_spend` macro to add Google / TikTok.
+    columns:
+      - name: date_day
+        tests: [not_null]
+      - name: platform
+        tests: [not_null]
+      - name: spend
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between: { min_value: 0 }
+
+  - name: int_customers__order_history
+    description: Per-customer order rollup with lifetime metrics and acquisition source.
+    columns:
+      - name: customer_id
+        tests: [unique, not_null]
+      - name: lifetime_order_count
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between: { min_value: 1 }
+
+  - name: int_sessions__attributed
+    description: GA4 sessions tagged with the order they converted into (if any). Used downstream to build session-to-order funnel metrics.
+    columns:
+      - name: session_id
+        tests: [not_null]

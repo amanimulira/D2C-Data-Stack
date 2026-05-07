@@ -1,0 +1,120 @@
+version: 2
+
+seeds:
+  - name: shopify_orders
+    description: Synthetic Shopify orders. In production, replace with raw orders landed by Fivetran's Shopify connector or a custom ELT pipeline.
+    columns:
+      - name: order_id
+        description: Primary key. Shopify order GID in production.
+        tests: [unique, not_null]
+      - name: customer_id
+        description: FK to shopify_customers. Null for guest checkouts (none in this seed).
+        tests: [not_null]
+      - name: total_price
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+
+  - name: shopify_order_lines
+    description: One row per line item per order. Lines join to orders on order_id and to products on product_id.
+    columns:
+      - name: order_line_id
+        tests: [unique, not_null]
+      - name: order_id
+        tests:
+          - not_null
+          - relationships: { to: ref('shopify_orders'), field: order_id }
+      - name: product_id
+        tests:
+          - relationships: { to: ref('shopify_products'), field: product_id }
+      - name: quantity
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between: { min_value: 1 }
+
+  - name: shopify_customers
+    description: Customer master. PII columns (email, phone) flagged in staging via meta tags.
+    columns:
+      - name: customer_id
+        tests: [unique, not_null]
+      - name: email
+        tests: [not_null]
+
+  - name: shopify_products
+    columns:
+      - name: product_id
+        tests: [unique, not_null]
+      - name: cost
+        description: COGS used to compute gross margin. Set to null for products with cost not yet captured.
+
+  - name: shopify_refunds
+    columns:
+      - name: refund_id
+        tests: [unique, not_null]
+      - name: order_id
+        tests:
+          - relationships: { to: ref('shopify_orders'), field: order_id }
+
+  - name: klaviyo_events
+    description: All Klaviyo profile events. Includes Placed Order, Started Checkout, Received Email, Opened Email, Clicked Email, Subscribed to List.
+    columns:
+      - name: event_id
+        tests: [unique, not_null]
+      - name: profile_id
+        tests: [not_null]
+
+  - name: klaviyo_campaigns
+    columns:
+      - name: campaign_id
+        tests: [unique, not_null]
+
+  - name: klaviyo_flows
+    columns:
+      - name: flow_id
+        tests: [unique, not_null]
+
+  - name: klaviyo_profiles
+    columns:
+      - name: profile_id
+        tests: [unique, not_null]
+      - name: email
+        tests: [not_null]
+
+  - name: meta_ads_campaigns
+    columns:
+      - name: campaign_id
+        tests: [unique, not_null]
+
+  - name: meta_ads_ad_sets
+    columns:
+      - name: ad_set_id
+        tests: [unique, not_null]
+      - name: campaign_id
+        tests:
+          - relationships: { to: ref('meta_ads_campaigns'), field: campaign_id }
+
+  - name: meta_ads_ads
+    columns:
+      - name: ad_id
+        tests: [unique, not_null]
+      - name: ad_set_id
+        tests:
+          - relationships: { to: ref('meta_ads_ad_sets'), field: ad_set_id }
+
+  - name: meta_ads_ad_insights
+    description: Daily campaign-level performance. Grain (date_day, campaign_id, ad_set_id, ad_id) is preserved through staging.
+    columns:
+      - name: spend
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between: { min_value: 0 }
+
+  - name: ga4_events
+    description: Flattened GA4 event stream. In production this comes from BigQuery export replicated into Snowflake.
+    columns:
+      - name: event_id
+        tests: [unique, not_null]
+
+  - name: countries
+    description: Reference dimension joining ISO country codes to friendly names and regions.
+    columns:
+      - name: country_code
+        tests: [unique, not_null]

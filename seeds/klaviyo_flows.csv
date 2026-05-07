@@ -1,0 +1,5 @@
+flow_id,name,trigger_type,status
+flow_001,Welcome Series,list_subscribed,active
+flow_002,Abandoned Cart,abandoned_checkout,active
+flow_003,Post Purchase,placed_order,active
+flow_004,Win Back 60d,inactive_60d,active

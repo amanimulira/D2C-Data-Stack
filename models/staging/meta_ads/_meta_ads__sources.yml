@@ -1,0 +1,31 @@
+version: 2
+
+sources:
+  - name: meta_ads
+    description: |
+      Meta (Facebook + Instagram) advertising data landed daily by Fivetran.
+      The campaign → ad_set → ad hierarchy mirrors the Meta Marketing API.
+      Insights are landed at the `(date, campaign, ad_set, ad)` grain. Reported
+      conversions are Meta's view-through and click-through attributed events;
+      they routinely overstate compared to UTM-based last-touch.
+    schema: raw_meta_ads
+
+    freshness:
+      warn_after:  { count: 12, period: hour }
+      error_after: { count: 36, period: hour }
+    loaded_at_field: date_day
+
+    tables:
+      - name: meta_ads_campaigns
+        identifier: meta_ads_campaigns
+      - name: meta_ads_ad_sets
+        identifier: meta_ads_ad_sets
+      - name: meta_ads_ads
+        identifier: meta_ads_ads
+      - name: meta_ads_ad_insights
+        identifier: meta_ads_ad_insights
+        description: Daily ad performance. Spend is in account currency (USD here).
+        columns:
+          - name: spend
+            tests:
+              - dbt_expectations.expect_column_values_to_be_between: { min_value: 0 }

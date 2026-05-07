@@ -1,0 +1,38 @@
+version: 2
+
+sources:
+  - name: klaviyo
+    description: |
+      Raw Klaviyo data landed by Fivetran's Klaviyo connector. The `klaviyo_events`
+      stream is the workhorse — one row per profile event (Placed Order, Started
+      Checkout, Received/Opened/Clicked Email, Subscribed to List, etc.). Joining
+      events to the Shopify order graph requires email or `attributed_order_id`.
+    schema: raw_klaviyo
+
+    freshness:
+      warn_after:  { count: 12, period: hour }
+      error_after: { count: 36, period: hour }
+    loaded_at_field: event_at
+
+    tables:
+      - name: klaviyo_events
+        identifier: klaviyo_events
+        description: Profile event stream. The `event_value` column carries the order subtotal for `Placed Order` events.
+        columns:
+          - name: event_id
+            tests: [unique, not_null]
+
+      - name: klaviyo_campaigns
+        identifier: klaviyo_campaigns
+        description: One row per campaign send (email or SMS).
+        loaded_at_field: sent_at
+
+      - name: klaviyo_flows
+        identifier: klaviyo_flows
+        description: Trigger-based automation flows (welcome, abandoned cart, post-purchase).
+        loaded_at_field: null
+
+      - name: klaviyo_profiles
+        identifier: klaviyo_profiles
+        description: Klaviyo customer profile. Keyed by `profile_id`; joined to Shopify on email.
+        loaded_at_field: created_at

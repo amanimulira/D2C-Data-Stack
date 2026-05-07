@@ -1,0 +1,278 @@
+event_id,event_name,event_timestamp,user_pseudo_id,session_id,page_location,page_title,source,medium,campaign,ga_session_number,event_value,items_count
+ge_00001,session_start,2026-02-03 14:16:30,upid_1001,sid_c_001_1,https://shop.example.com/,Home,meta_ads,paid_social,q1_prospecting,1,0.00,0
+ge_00002,page_view,2026-02-03 14:16:50,upid_1001,sid_c_001_1,https://shop.example.com/,Home,meta_ads,paid_social,q1_prospecting,1,0.00,0
+ge_00003,page_view,2026-02-03 14:17:50,upid_1001,sid_c_001_1,https://shop.example.com/products/skincare,Skincare,meta_ads,paid_social,q1_prospecting,1,0.00,0
+ge_00004,view_item,2026-02-03 14:18:50,upid_1001,sid_c_001_1,https://shop.example.com/products/hydration-serum,Hydration Serum,meta_ads,paid_social,q1_prospecting,1,76.00,1
+ge_00005,add_to_cart,2026-02-03 14:20:20,upid_1001,sid_c_001_1,https://shop.example.com/cart,Cart,meta_ads,paid_social,q1_prospecting,1,76.00,1
+ge_00006,begin_checkout,2026-02-03 14:21:20,upid_1001,sid_c_001_1,https://shop.example.com/checkout,Checkout,meta_ads,paid_social,q1_prospecting,1,76.00,1
+ge_00007,purchase,2026-02-03 14:22:30,upid_1001,sid_c_001_1,https://shop.example.com/checkout/thank-you,Thank you,meta_ads,paid_social,q1_prospecting,1,76.00,1
+ge_00008,session_start,2026-02-05 11:09:30,upid_1002,sid_c_002_1,https://shop.example.com/,Home,meta_ads,paid_social,q1_prospecting,1,0.00,0
+ge_00009,page_view,2026-02-05 11:09:50,upid_1002,sid_c_002_1,https://shop.example.com/,Home,meta_ads,paid_social,q1_prospecting,1,0.00,0
+ge_00010,page_view,2026-02-05 11:10:50,upid_1002,sid_c_002_1,https://shop.example.com/products/skincare,Skincare,meta_ads,paid_social,q1_prospecting,1,0.00,0
+ge_00011,view_item,2026-02-05 11:11:50,upid_1002,sid_c_002_1,https://shop.example.com/products/hydration-serum,Hydration Serum,meta_ads,paid_social,q1_prospecting,1,32.00,1
+ge_00012,add_to_cart,2026-02-05 11:13:20,upid_1002,sid_c_002_1,https://shop.example.com/cart,Cart,meta_ads,paid_social,q1_prospecting,1,32.00,1
+ge_00013,begin_checkout,2026-02-05 11:14:20,upid_1002,sid_c_002_1,https://shop.example.com/checkout,Checkout,meta_ads,paid_social,q1_prospecting,1,32.00,1
+ge_00014,purchase,2026-02-05 11:15:30,upid_1002,sid_c_002_1,https://shop.example.com/checkout/thank-you,Thank you,meta_ads,paid_social,q1_prospecting,1,32.00,1
+ge_00015,session_start,2026-02-07 09:42:30,upid_1003,sid_c_003_1,https://shop.example.com/,Home,klaviyo,email,welcome_series,1,0.00,0
+ge_00016,page_view,2026-02-07 09:42:50,upid_1003,sid_c_003_1,https://shop.example.com/,Home,klaviyo,email,welcome_series,1,0.00,0
+ge_00017,page_view,2026-02-07 09:43:50,upid_1003,sid_c_003_1,https://shop.example.com/products/skincare,Skincare,klaviyo,email,welcome_series,1,0.00,0
+ge_00018,view_item,2026-02-07 09:44:50,upid_1003,sid_c_003_1,https://shop.example.com/products/hydration-serum,Hydration Serum,klaviyo,email,welcome_series,1,65.00,1
+ge_00019,add_to_cart,2026-02-07 09:46:20,upid_1003,sid_c_003_1,https://shop.example.com/cart,Cart,klaviyo,email,welcome_series,1,65.00,1
+ge_00020,begin_checkout,2026-02-07 09:47:20,upid_1003,sid_c_003_1,https://shop.example.com/checkout,Checkout,klaviyo,email,welcome_series,1,65.00,1
+ge_00021,purchase,2026-02-07 09:48:30,upid_1003,sid_c_003_1,https://shop.example.com/checkout/thank-you,Thank you,klaviyo,email,welcome_series,1,65.00,1
+ge_00022,session_start,2026-02-10 17:24:30,upid_1004,sid_c_004_1,https://shop.example.com/,Home,meta_ads,paid_social,q1_prospecting,1,0.00,0
+ge_00023,page_view,2026-02-10 17:24:50,upid_1004,sid_c_004_1,https://shop.example.com/,Home,meta_ads,paid_social,q1_prospecting,1,0.00,0
+ge_00024,page_view,2026-02-10 17:25:50,upid_1004,sid_c_004_1,https://shop.example.com/products/skincare,Skincare,meta_ads,paid_social,q1_prospecting,1,0.00,0
+ge_00025,view_item,2026-02-10 17:26:50,upid_1004,sid_c_004_1,https://shop.example.com/products/hydration-serum,Hydration Serum,meta_ads,paid_social,q1_prospecting,1,100.00,1
+ge_00026,add_to_cart,2026-02-10 17:28:20,upid_1004,sid_c_004_1,https://shop.example.com/cart,Cart,meta_ads,paid_social,q1_prospecting,1,100.00,1
+ge_00027,begin_checkout,2026-02-10 17:29:20,upid_1004,sid_c_004_1,https://shop.example.com/checkout,Checkout,meta_ads,paid_social,q1_prospecting,1,100.00,1
+ge_00028,purchase,2026-02-10 17:30:30,upid_1004,sid_c_004_1,https://shop.example.com/checkout/thank-you,Thank you,meta_ads,paid_social,q1_prospecting,1,100.00,1
+ge_00029,session_start,2026-02-12 08:49:30,upid_1005,sid_c_005_1,https://shop.example.com/,Home,google,organic,(not set),1,0.00,0
+ge_00030,page_view,2026-02-12 08:49:50,upid_1005,sid_c_005_1,https://shop.example.com/,Home,google,organic,(not set),1,0.00,0
+ge_00031,page_view,2026-02-12 08:50:50,upid_1005,sid_c_005_1,https://shop.example.com/products/skincare,Skincare,google,organic,(not set),1,0.00,0
+ge_00032,view_item,2026-02-12 08:51:50,upid_1005,sid_c_005_1,https://shop.example.com/products/hydration-serum,Hydration Serum,google,organic,(not set),1,48.00,1
+ge_00033,add_to_cart,2026-02-12 08:53:20,upid_1005,sid_c_005_1,https://shop.example.com/cart,Cart,google,organic,(not set),1,48.00,1
+ge_00034,begin_checkout,2026-02-12 08:54:20,upid_1005,sid_c_005_1,https://shop.example.com/checkout,Checkout,google,organic,(not set),1,48.00,1
+ge_00035,purchase,2026-02-12 08:55:30,upid_1005,sid_c_005_1,https://shop.example.com/checkout/thank-you,Thank you,google,organic,(not set),1,48.00,1
+ge_00036,session_start,2026-02-14 16:02:30,upid_1006,sid_c_006_1,https://shop.example.com/,Home,meta_ads,paid_social,q1_retargeting,1,0.00,0
+ge_00037,page_view,2026-02-14 16:02:50,upid_1006,sid_c_006_1,https://shop.example.com/,Home,meta_ads,paid_social,q1_retargeting,1,0.00,0
+ge_00038,page_view,2026-02-14 16:03:50,upid_1006,sid_c_006_1,https://shop.example.com/products/skincare,Skincare,meta_ads,paid_social,q1_retargeting,1,0.00,0
+ge_00039,view_item,2026-02-14 16:04:50,upid_1006,sid_c_006_1,https://shop.example.com/products/hydration-serum,Hydration Serum,meta_ads,paid_social,q1_retargeting,1,48.00,1
+ge_00040,add_to_cart,2026-02-14 16:06:20,upid_1006,sid_c_006_1,https://shop.example.com/cart,Cart,meta_ads,paid_social,q1_retargeting,1,48.00,1
+ge_00041,begin_checkout,2026-02-14 16:07:20,upid_1006,sid_c_006_1,https://shop.example.com/checkout,Checkout,meta_ads,paid_social,q1_retargeting,1,48.00,1
+ge_00042,purchase,2026-02-14 16:08:30,upid_1006,sid_c_006_1,https://shop.example.com/checkout/thank-you,Thank you,meta_ads,paid_social,q1_retargeting,1,48.00,1
+ge_00043,session_start,2026-02-18 13:34:30,upid_1001,sid_c_001_2,https://shop.example.com/,Home,klaviyo,email,welcome_series,2,0.00,0
+ge_00044,page_view,2026-02-18 13:34:50,upid_1001,sid_c_001_2,https://shop.example.com/,Home,klaviyo,email,welcome_series,2,0.00,0
+ge_00045,page_view,2026-02-18 13:35:50,upid_1001,sid_c_001_2,https://shop.example.com/products/skincare,Skincare,klaviyo,email,welcome_series,2,0.00,0
+ge_00046,view_item,2026-02-18 13:36:50,upid_1001,sid_c_001_2,https://shop.example.com/products/hydration-serum,Hydration Serum,klaviyo,email,welcome_series,2,36.00,1
+ge_00047,add_to_cart,2026-02-18 13:38:20,upid_1001,sid_c_001_2,https://shop.example.com/cart,Cart,klaviyo,email,welcome_series,2,36.00,1
+ge_00048,begin_checkout,2026-02-18 13:39:20,upid_1001,sid_c_001_2,https://shop.example.com/checkout,Checkout,klaviyo,email,welcome_series,2,36.00,1
+ge_00049,purchase,2026-02-18 13:40:30,upid_1001,sid_c_001_2,https://shop.example.com/checkout/thank-you,Thank you,klaviyo,email,welcome_series,2,36.00,1
+ge_00050,session_start,2026-02-22 20:49:30,upid_1007,sid_c_007_1,https://shop.example.com/,Home,(direct),(none),(not set),1,0.00,0
+ge_00051,page_view,2026-02-22 20:49:50,upid_1007,sid_c_007_1,https://shop.example.com/,Home,(direct),(none),(not set),1,0.00,0
+ge_00052,page_view,2026-02-22 20:50:50,upid_1007,sid_c_007_1,https://shop.example.com/products/skincare,Skincare,(direct),(none),(not set),1,0.00,0
+ge_00053,view_item,2026-02-22 20:51:50,upid_1007,sid_c_007_1,https://shop.example.com/products/hydration-serum,Hydration Serum,(direct),(none),(not set),1,46.00,1
+ge_00054,add_to_cart,2026-02-22 20:53:20,upid_1007,sid_c_007_1,https://shop.example.com/cart,Cart,(direct),(none),(not set),1,46.00,1
+ge_00055,begin_checkout,2026-02-22 20:54:20,upid_1007,sid_c_007_1,https://shop.example.com/checkout,Checkout,(direct),(none),(not set),1,46.00,1
+ge_00056,purchase,2026-02-22 20:55:30,upid_1007,sid_c_007_1,https://shop.example.com/checkout/thank-you,Thank you,(direct),(none),(not set),1,46.00,1
+ge_00057,session_start,2026-02-25 12:12:30,upid_1002,sid_c_002_2,https://shop.example.com/,Home,klaviyo,email,welcome_series,2,0.00,0
+ge_00058,page_view,2026-02-25 12:12:50,upid_1002,sid_c_002_2,https://shop.example.com/,Home,klaviyo,email,welcome_series,2,0.00,0
+ge_00059,page_view,2026-02-25 12:13:50,upid_1002,sid_c_002_2,https://shop.example.com/products/skincare,Skincare,klaviyo,email,welcome_series,2,0.00,0
+ge_00060,view_item,2026-02-25 12:14:50,upid_1002,sid_c_002_2,https://shop.example.com/products/hydration-serum,Hydration Serum,klaviyo,email,welcome_series,2,58.00,1
+ge_00061,add_to_cart,2026-02-25 12:16:20,upid_1002,sid_c_002_2,https://shop.example.com/cart,Cart,klaviyo,email,welcome_series,2,58.00,1
+ge_00062,begin_checkout,2026-02-25 12:17:20,upid_1002,sid_c_002_2,https://shop.example.com/checkout,Checkout,klaviyo,email,welcome_series,2,58.00,1
+ge_00063,purchase,2026-02-25 12:18:30,upid_1002,sid_c_002_2,https://shop.example.com/checkout/thank-you,Thank you,klaviyo,email,welcome_series,2,58.00,1
+ge_00064,session_start,2026-02-28 07:36:30,upid_1008,sid_c_008_1,https://shop.example.com/,Home,meta_ads,paid_social,q1_prospecting,1,0.00,0
+ge_00065,page_view,2026-02-28 07:36:50,upid_1008,sid_c_008_1,https://shop.example.com/,Home,meta_ads,paid_social,q1_prospecting,1,0.00,0
+ge_00066,page_view,2026-02-28 07:37:50,upid_1008,sid_c_008_1,https://shop.example.com/products/skincare,Skincare,meta_ads,paid_social,q1_prospecting,1,0.00,0
+ge_00067,view_item,2026-02-28 07:38:50,upid_1008,sid_c_008_1,https://shop.example.com/products/hydration-serum,Hydration Serum,meta_ads,paid_social,q1_prospecting,1,65.00,1
+ge_00068,add_to_cart,2026-02-28 07:40:20,upid_1008,sid_c_008_1,https://shop.example.com/cart,Cart,meta_ads,paid_social,q1_prospecting,1,65.00,1
+ge_00069,begin_checkout,2026-02-28 07:41:20,upid_1008,sid_c_008_1,https://shop.example.com/checkout,Checkout,meta_ads,paid_social,q1_prospecting,1,65.00,1
+ge_00070,purchase,2026-02-28 07:42:30,upid_1008,sid_c_008_1,https://shop.example.com/checkout/thank-you,Thank you,meta_ads,paid_social,q1_prospecting,1,65.00,1
+ge_00071,session_start,2026-03-02 13:03:30,upid_1009,sid_c_009_1,https://shop.example.com/,Home,meta_ads,paid_social,q1_prospecting,1,0.00,0
+ge_00072,page_view,2026-03-02 13:03:50,upid_1009,sid_c_009_1,https://shop.example.com/,Home,meta_ads,paid_social,q1_prospecting,1,0.00,0
+ge_00073,page_view,2026-03-02 13:04:50,upid_1009,sid_c_009_1,https://shop.example.com/products/skincare,Skincare,meta_ads,paid_social,q1_prospecting,1,0.00,0
+ge_00074,view_item,2026-03-02 13:05:50,upid_1009,sid_c_009_1,https://shop.example.com/products/hydration-serum,Hydration Serum,meta_ads,paid_social,q1_prospecting,1,60.00,1
+ge_00075,add_to_cart,2026-03-02 13:07:20,upid_1009,sid_c_009_1,https://shop.example.com/cart,Cart,meta_ads,paid_social,q1_prospecting,1,60.00,1
+ge_00076,begin_checkout,2026-03-02 13:08:20,upid_1009,sid_c_009_1,https://shop.example.com/checkout,Checkout,meta_ads,paid_social,q1_prospecting,1,60.00,1
+ge_00077,purchase,2026-03-02 13:09:30,upid_1009,sid_c_009_1,https://shop.example.com/checkout/thank-you,Thank you,meta_ads,paid_social,q1_prospecting,1,60.00,1
+ge_00078,session_start,2026-03-05 10:16:30,upid_1003,sid_c_003_2,https://shop.example.com/,Home,klaviyo,email,march_restock,2,0.00,0
+ge_00079,page_view,2026-03-05 10:16:50,upid_1003,sid_c_003_2,https://shop.example.com/,Home,klaviyo,email,march_restock,2,0.00,0
+ge_00080,page_view,2026-03-05 10:17:50,upid_1003,sid_c_003_2,https://shop.example.com/products/skincare,Skincare,klaviyo,email,march_restock,2,0.00,0
+ge_00081,view_item,2026-03-05 10:18:50,upid_1003,sid_c_003_2,https://shop.example.com/products/hydration-serum,Hydration Serum,klaviyo,email,march_restock,2,24.00,1
+ge_00082,add_to_cart,2026-03-05 10:20:20,upid_1003,sid_c_003_2,https://shop.example.com/cart,Cart,klaviyo,email,march_restock,2,24.00,1
+ge_00083,begin_checkout,2026-03-05 10:21:20,upid_1003,sid_c_003_2,https://shop.example.com/checkout,Checkout,klaviyo,email,march_restock,2,24.00,1
+ge_00084,purchase,2026-03-05 10:22:30,upid_1003,sid_c_003_2,https://shop.example.com/checkout/thank-you,Thank you,klaviyo,email,march_restock,2,24.00,1
+ge_00085,session_start,2026-03-08 18:54:30,upid_1010,sid_c_010_1,https://shop.example.com/,Home,meta_ads,paid_social,q1_prospecting,1,0.00,0
+ge_00086,page_view,2026-03-08 18:54:50,upid_1010,sid_c_010_1,https://shop.example.com/,Home,meta_ads,paid_social,q1_prospecting,1,0.00,0
+ge_00087,page_view,2026-03-08 18:55:50,upid_1010,sid_c_010_1,https://shop.example.com/products/skincare,Skincare,meta_ads,paid_social,q1_prospecting,1,0.00,0
+ge_00088,view_item,2026-03-08 18:56:50,upid_1010,sid_c_010_1,https://shop.example.com/products/hydration-serum,Hydration Serum,meta_ads,paid_social,q1_prospecting,1,48.00,1
+ge_00089,add_to_cart,2026-03-08 18:58:20,upid_1010,sid_c_010_1,https://shop.example.com/cart,Cart,meta_ads,paid_social,q1_prospecting,1,48.00,1
+ge_00090,begin_checkout,2026-03-08 18:59:20,upid_1010,sid_c_010_1,https://shop.example.com/checkout,Checkout,meta_ads,paid_social,q1_prospecting,1,48.00,1
+ge_00091,purchase,2026-03-08 19:00:30,upid_1010,sid_c_010_1,https://shop.example.com/checkout/thank-you,Thank you,meta_ads,paid_social,q1_prospecting,1,48.00,1
+ge_00092,session_start,2026-03-10 14:27:30,upid_1004,sid_c_004_2,https://shop.example.com/,Home,klaviyo,email,march_restock,2,0.00,0
+ge_00093,page_view,2026-03-10 14:27:50,upid_1004,sid_c_004_2,https://shop.example.com/,Home,klaviyo,email,march_restock,2,0.00,0
+ge_00094,page_view,2026-03-10 14:28:50,upid_1004,sid_c_004_2,https://shop.example.com/products/skincare,Skincare,klaviyo,email,march_restock,2,0.00,0
+ge_00095,view_item,2026-03-10 14:29:50,upid_1004,sid_c_004_2,https://shop.example.com/products/hydration-serum,Hydration Serum,klaviyo,email,march_restock,2,18.00,1
+ge_00096,add_to_cart,2026-03-10 14:31:20,upid_1004,sid_c_004_2,https://shop.example.com/cart,Cart,klaviyo,email,march_restock,2,18.00,1
+ge_00097,begin_checkout,2026-03-10 14:32:20,upid_1004,sid_c_004_2,https://shop.example.com/checkout,Checkout,klaviyo,email,march_restock,2,18.00,1
+ge_00098,purchase,2026-03-10 14:33:30,upid_1004,sid_c_004_2,https://shop.example.com/checkout/thank-you,Thank you,klaviyo,email,march_restock,2,18.00,1
+ge_00099,session_start,2026-03-12 11:05:30,upid_1001,sid_c_001_3,https://shop.example.com/,Home,klaviyo,email,march_restock,3,0.00,0
+ge_00100,page_view,2026-03-12 11:05:50,upid_1001,sid_c_001_3,https://shop.example.com/,Home,klaviyo,email,march_restock,3,0.00,0
+ge_00101,page_view,2026-03-12 11:06:50,upid_1001,sid_c_001_3,https://shop.example.com/products/skincare,Skincare,klaviyo,email,march_restock,3,0.00,0
+ge_00102,view_item,2026-03-12 11:07:50,upid_1001,sid_c_001_3,https://shop.example.com/products/hydration-serum,Hydration Serum,klaviyo,email,march_restock,3,58.00,1
+ge_00103,add_to_cart,2026-03-12 11:09:20,upid_1001,sid_c_001_3,https://shop.example.com/cart,Cart,klaviyo,email,march_restock,3,58.00,1
+ge_00104,begin_checkout,2026-03-12 11:10:20,upid_1001,sid_c_001_3,https://shop.example.com/checkout,Checkout,klaviyo,email,march_restock,3,58.00,1
+ge_00105,purchase,2026-03-12 11:11:30,upid_1001,sid_c_001_3,https://shop.example.com/checkout/thank-you,Thank you,klaviyo,email,march_restock,3,58.00,1
+ge_00106,session_start,2026-03-15 15:19:30,upid_1005,sid_c_005_2,https://shop.example.com/,Home,klaviyo,email,march_restock,2,0.00,0
+ge_00107,page_view,2026-03-15 15:19:50,upid_1005,sid_c_005_2,https://shop.example.com/,Home,klaviyo,email,march_restock,2,0.00,0
+ge_00108,page_view,2026-03-15 15:20:50,upid_1005,sid_c_005_2,https://shop.example.com/products/skincare,Skincare,klaviyo,email,march_restock,2,0.00,0
+ge_00109,view_item,2026-03-15 15:21:50,upid_1005,sid_c_005_2,https://shop.example.com/products/hydration-serum,Hydration Serum,klaviyo,email,march_restock,2,42.00,1
+ge_00110,add_to_cart,2026-03-15 15:23:20,upid_1005,sid_c_005_2,https://shop.example.com/cart,Cart,klaviyo,email,march_restock,2,42.00,1
+ge_00111,begin_checkout,2026-03-15 15:24:20,upid_1005,sid_c_005_2,https://shop.example.com/checkout,Checkout,klaviyo,email,march_restock,2,42.00,1
+ge_00112,purchase,2026-03-15 15:25:30,upid_1005,sid_c_005_2,https://shop.example.com/checkout/thank-you,Thank you,klaviyo,email,march_restock,2,42.00,1
+ge_00113,session_start,2026-03-18 08:42:30,upid_1002,sid_c_002_3,https://shop.example.com/,Home,meta_ads,paid_social,q1_retargeting,3,0.00,0
+ge_00114,page_view,2026-03-18 08:42:50,upid_1002,sid_c_002_3,https://shop.example.com/,Home,meta_ads,paid_social,q1_retargeting,3,0.00,0
+ge_00115,page_view,2026-03-18 08:43:50,upid_1002,sid_c_002_3,https://shop.example.com/products/skincare,Skincare,meta_ads,paid_social,q1_retargeting,3,0.00,0
+ge_00116,view_item,2026-03-18 08:44:50,upid_1002,sid_c_002_3,https://shop.example.com/products/hydration-serum,Hydration Serum,meta_ads,paid_social,q1_retargeting,3,28.00,1
+ge_00117,add_to_cart,2026-03-18 08:46:20,upid_1002,sid_c_002_3,https://shop.example.com/cart,Cart,meta_ads,paid_social,q1_retargeting,3,28.00,1
+ge_00118,begin_checkout,2026-03-18 08:47:20,upid_1002,sid_c_002_3,https://shop.example.com/checkout,Checkout,meta_ads,paid_social,q1_retargeting,3,28.00,1
+ge_00119,purchase,2026-03-18 08:48:30,upid_1002,sid_c_002_3,https://shop.example.com/checkout/thank-you,Thank you,meta_ads,paid_social,q1_retargeting,3,28.00,1
+ge_00120,session_start,2026-03-22 17:49:30,upid_1006,sid_c_006_2,https://shop.example.com/,Home,klaviyo,email,march_restock,2,0.00,0
+ge_00121,page_view,2026-03-22 17:49:50,upid_1006,sid_c_006_2,https://shop.example.com/,Home,klaviyo,email,march_restock,2,0.00,0
+ge_00122,page_view,2026-03-22 17:50:50,upid_1006,sid_c_006_2,https://shop.example.com/products/skincare,Skincare,klaviyo,email,march_restock,2,0.00,0
+ge_00123,view_item,2026-03-22 17:51:50,upid_1006,sid_c_006_2,https://shop.example.com/products/hydration-serum,Hydration Serum,klaviyo,email,march_restock,2,65.00,1
+ge_00124,add_to_cart,2026-03-22 17:53:20,upid_1006,sid_c_006_2,https://shop.example.com/cart,Cart,klaviyo,email,march_restock,2,65.00,1
+ge_00125,begin_checkout,2026-03-22 17:54:20,upid_1006,sid_c_006_2,https://shop.example.com/checkout,Checkout,klaviyo,email,march_restock,2,65.00,1
+ge_00126,purchase,2026-03-22 17:55:30,upid_1006,sid_c_006_2,https://shop.example.com/checkout/thank-you,Thank you,klaviyo,email,march_restock,2,65.00,1
+ge_00127,session_start,2026-03-25 09:54:30,upid_1007,sid_c_007_2,https://shop.example.com/,Home,google,organic,(not set),2,0.00,0
+ge_00128,page_view,2026-03-25 09:54:50,upid_1007,sid_c_007_2,https://shop.example.com/,Home,google,organic,(not set),2,0.00,0
+ge_00129,page_view,2026-03-25 09:55:50,upid_1007,sid_c_007_2,https://shop.example.com/products/skincare,Skincare,google,organic,(not set),2,0.00,0
+ge_00130,view_item,2026-03-25 09:56:50,upid_1007,sid_c_007_2,https://shop.example.com/products/hydration-serum,Hydration Serum,google,organic,(not set),2,24.00,1
+ge_00131,add_to_cart,2026-03-25 09:58:20,upid_1007,sid_c_007_2,https://shop.example.com/cart,Cart,google,organic,(not set),2,24.00,1
+ge_00132,begin_checkout,2026-03-25 09:59:20,upid_1007,sid_c_007_2,https://shop.example.com/checkout,Checkout,google,organic,(not set),2,24.00,1
+ge_00133,purchase,2026-03-25 10:00:30,upid_1007,sid_c_007_2,https://shop.example.com/checkout/thank-you,Thank you,google,organic,(not set),2,24.00,1
+ge_00134,session_start,2026-03-28 09:09:30,upid_1008,sid_c_008_2,https://shop.example.com/,Home,meta_ads,paid_social,q1_retargeting,2,0.00,0
+ge_00135,page_view,2026-03-28 09:09:50,upid_1008,sid_c_008_2,https://shop.example.com/,Home,meta_ads,paid_social,q1_retargeting,2,0.00,0
+ge_00136,page_view,2026-03-28 09:10:50,upid_1008,sid_c_008_2,https://shop.example.com/products/skincare,Skincare,meta_ads,paid_social,q1_retargeting,2,0.00,0
+ge_00137,view_item,2026-03-28 09:11:50,upid_1008,sid_c_008_2,https://shop.example.com/products/hydration-serum,Hydration Serum,meta_ads,paid_social,q1_retargeting,2,66.00,1
+ge_00138,add_to_cart,2026-03-28 09:13:20,upid_1008,sid_c_008_2,https://shop.example.com/cart,Cart,meta_ads,paid_social,q1_retargeting,2,66.00,1
+ge_00139,begin_checkout,2026-03-28 09:14:20,upid_1008,sid_c_008_2,https://shop.example.com/checkout,Checkout,meta_ads,paid_social,q1_retargeting,2,66.00,1
+ge_00140,purchase,2026-03-28 09:15:30,upid_1008,sid_c_008_2,https://shop.example.com/checkout/thank-you,Thank you,meta_ads,paid_social,q1_retargeting,2,66.00,1
+ge_00141,session_start,2026-04-02 11:54:30,upid_1009,sid_c_009_2,https://shop.example.com/,Home,klaviyo,email,april_loyalty,2,0.00,0
+ge_00142,page_view,2026-04-02 11:54:50,upid_1009,sid_c_009_2,https://shop.example.com/,Home,klaviyo,email,april_loyalty,2,0.00,0
+ge_00143,page_view,2026-04-02 11:55:50,upid_1009,sid_c_009_2,https://shop.example.com/products/skincare,Skincare,klaviyo,email,april_loyalty,2,0.00,0
+ge_00144,view_item,2026-04-02 11:56:50,upid_1009,sid_c_009_2,https://shop.example.com/products/hydration-serum,Hydration Serum,klaviyo,email,april_loyalty,2,58.00,1
+ge_00145,add_to_cart,2026-04-02 11:58:20,upid_1009,sid_c_009_2,https://shop.example.com/cart,Cart,klaviyo,email,april_loyalty,2,58.00,1
+ge_00146,begin_checkout,2026-04-02 11:59:20,upid_1009,sid_c_009_2,https://shop.example.com/checkout,Checkout,klaviyo,email,april_loyalty,2,58.00,1
+ge_00147,purchase,2026-04-02 12:00:30,upid_1009,sid_c_009_2,https://shop.example.com/checkout/thank-you,Thank you,klaviyo,email,april_loyalty,2,58.00,1
+ge_00148,session_start,2026-04-05 16:27:30,upid_1010,sid_c_010_2,https://shop.example.com/,Home,meta_ads,paid_social,q1_retargeting,2,0.00,0
+ge_00149,page_view,2026-04-05 16:27:50,upid_1010,sid_c_010_2,https://shop.example.com/,Home,meta_ads,paid_social,q1_retargeting,2,0.00,0
+ge_00150,page_view,2026-04-05 16:28:50,upid_1010,sid_c_010_2,https://shop.example.com/products/skincare,Skincare,meta_ads,paid_social,q1_retargeting,2,0.00,0
+ge_00151,view_item,2026-04-05 16:29:50,upid_1010,sid_c_010_2,https://shop.example.com/products/hydration-serum,Hydration Serum,meta_ads,paid_social,q1_retargeting,2,32.00,1
+ge_00152,add_to_cart,2026-04-05 16:31:20,upid_1010,sid_c_010_2,https://shop.example.com/cart,Cart,meta_ads,paid_social,q1_retargeting,2,32.00,1
+ge_00153,begin_checkout,2026-04-05 16:32:20,upid_1010,sid_c_010_2,https://shop.example.com/checkout,Checkout,meta_ads,paid_social,q1_retargeting,2,32.00,1
+ge_00154,purchase,2026-04-05 16:33:30,upid_1010,sid_c_010_2,https://shop.example.com/checkout/thank-you,Thank you,meta_ads,paid_social,q1_retargeting,2,32.00,1
+ge_00155,session_start,2026-04-08 11:44:30,upid_1001,sid_c_001_4,https://shop.example.com/,Home,klaviyo,email,april_loyalty,4,0.00,0
+ge_00156,page_view,2026-04-08 11:44:50,upid_1001,sid_c_001_4,https://shop.example.com/,Home,klaviyo,email,april_loyalty,4,0.00,0
+ge_00157,page_view,2026-04-08 11:45:50,upid_1001,sid_c_001_4,https://shop.example.com/products/skincare,Skincare,klaviyo,email,april_loyalty,4,0.00,0
+ge_00158,view_item,2026-04-08 11:46:50,upid_1001,sid_c_001_4,https://shop.example.com/products/hydration-serum,Hydration Serum,klaviyo,email,april_loyalty,4,65.00,1
+ge_00159,add_to_cart,2026-04-08 11:48:20,upid_1001,sid_c_001_4,https://shop.example.com/cart,Cart,klaviyo,email,april_loyalty,4,65.00,1
+ge_00160,begin_checkout,2026-04-08 11:49:20,upid_1001,sid_c_001_4,https://shop.example.com/checkout,Checkout,klaviyo,email,april_loyalty,4,65.00,1
+ge_00161,purchase,2026-04-08 11:50:30,upid_1001,sid_c_001_4,https://shop.example.com/checkout/thank-you,Thank you,klaviyo,email,april_loyalty,4,65.00,1
+ge_00162,session_start,2026-04-11 14:08:30,upid_1003,sid_c_003_3,https://shop.example.com/,Home,klaviyo,email,april_loyalty,3,0.00,0
+ge_00163,page_view,2026-04-11 14:08:50,upid_1003,sid_c_003_3,https://shop.example.com/,Home,klaviyo,email,april_loyalty,3,0.00,0
+ge_00164,page_view,2026-04-11 14:09:50,upid_1003,sid_c_003_3,https://shop.example.com/products/skincare,Skincare,klaviyo,email,april_loyalty,3,0.00,0
+ge_00165,view_item,2026-04-11 14:10:50,upid_1003,sid_c_003_3,https://shop.example.com/products/hydration-serum,Hydration Serum,klaviyo,email,april_loyalty,3,28.00,1
+ge_00166,add_to_cart,2026-04-11 14:12:20,upid_1003,sid_c_003_3,https://shop.example.com/cart,Cart,klaviyo,email,april_loyalty,3,28.00,1
+ge_00167,begin_checkout,2026-04-11 14:13:20,upid_1003,sid_c_003_3,https://shop.example.com/checkout,Checkout,klaviyo,email,april_loyalty,3,28.00,1
+ge_00168,purchase,2026-04-11 14:14:30,upid_1003,sid_c_003_3,https://shop.example.com/checkout/thank-you,Thank you,klaviyo,email,april_loyalty,3,28.00,1
+ge_00169,session_start,2026-04-14 09:02:30,upid_1004,sid_c_004_3,https://shop.example.com/,Home,klaviyo,email,april_loyalty,3,0.00,0
+ge_00170,page_view,2026-04-14 09:02:50,upid_1004,sid_c_004_3,https://shop.example.com/,Home,klaviyo,email,april_loyalty,3,0.00,0
+ge_00171,page_view,2026-04-14 09:03:50,upid_1004,sid_c_004_3,https://shop.example.com/products/skincare,Skincare,klaviyo,email,april_loyalty,3,0.00,0
+ge_00172,view_item,2026-04-14 09:04:50,upid_1004,sid_c_004_3,https://shop.example.com/products/hydration-serum,Hydration Serum,klaviyo,email,april_loyalty,3,24.00,1
+ge_00173,add_to_cart,2026-04-14 09:06:20,upid_1004,sid_c_004_3,https://shop.example.com/cart,Cart,klaviyo,email,april_loyalty,3,24.00,1
+ge_00174,begin_checkout,2026-04-14 09:07:20,upid_1004,sid_c_004_3,https://shop.example.com/checkout,Checkout,klaviyo,email,april_loyalty,3,24.00,1
+ge_00175,purchase,2026-04-14 09:08:30,upid_1004,sid_c_004_3,https://shop.example.com/checkout/thank-you,Thank you,klaviyo,email,april_loyalty,3,24.00,1
+ge_00176,session_start,2026-04-17 18:16:30,upid_1005,sid_c_005_3,https://shop.example.com/,Home,klaviyo,email,april_loyalty,3,0.00,0
+ge_00177,page_view,2026-04-17 18:16:50,upid_1005,sid_c_005_3,https://shop.example.com/,Home,klaviyo,email,april_loyalty,3,0.00,0
+ge_00178,page_view,2026-04-17 18:17:50,upid_1005,sid_c_005_3,https://shop.example.com/products/skincare,Skincare,klaviyo,email,april_loyalty,3,0.00,0
+ge_00179,view_item,2026-04-17 18:18:50,upid_1005,sid_c_005_3,https://shop.example.com/products/hydration-serum,Hydration Serum,klaviyo,email,april_loyalty,3,48.00,1
+ge_00180,add_to_cart,2026-04-17 18:20:20,upid_1005,sid_c_005_3,https://shop.example.com/cart,Cart,klaviyo,email,april_loyalty,3,48.00,1
+ge_00181,begin_checkout,2026-04-17 18:21:20,upid_1005,sid_c_005_3,https://shop.example.com/checkout,Checkout,klaviyo,email,april_loyalty,3,48.00,1
+ge_00182,purchase,2026-04-17 18:22:30,upid_1005,sid_c_005_3,https://shop.example.com/checkout/thank-you,Thank you,klaviyo,email,april_loyalty,3,48.00,1
+ge_00183,session_start,2026-04-20 12:54:30,upid_1002,sid_c_002_4,https://shop.example.com/,Home,klaviyo,email,april_loyalty,4,0.00,0
+ge_00184,page_view,2026-04-20 12:54:50,upid_1002,sid_c_002_4,https://shop.example.com/,Home,klaviyo,email,april_loyalty,4,0.00,0
+ge_00185,page_view,2026-04-20 12:55:50,upid_1002,sid_c_002_4,https://shop.example.com/products/skincare,Skincare,klaviyo,email,april_loyalty,4,0.00,0
+ge_00186,view_item,2026-04-20 12:56:50,upid_1002,sid_c_002_4,https://shop.example.com/products/hydration-serum,Hydration Serum,klaviyo,email,april_loyalty,4,36.00,1
+ge_00187,add_to_cart,2026-04-20 12:58:20,upid_1002,sid_c_002_4,https://shop.example.com/cart,Cart,klaviyo,email,april_loyalty,4,36.00,1
+ge_00188,begin_checkout,2026-04-20 12:59:20,upid_1002,sid_c_002_4,https://shop.example.com/checkout,Checkout,klaviyo,email,april_loyalty,4,36.00,1
+ge_00189,purchase,2026-04-20 13:00:30,upid_1002,sid_c_002_4,https://shop.example.com/checkout/thank-you,Thank you,klaviyo,email,april_loyalty,4,36.00,1
+ge_00190,session_start,2026-04-23 21:24:30,upid_1007,sid_c_007_3,https://shop.example.com/,Home,klaviyo,email,april_loyalty,3,0.00,0
+ge_00191,page_view,2026-04-23 21:24:50,upid_1007,sid_c_007_3,https://shop.example.com/,Home,klaviyo,email,april_loyalty,3,0.00,0
+ge_00192,page_view,2026-04-23 21:25:50,upid_1007,sid_c_007_3,https://shop.example.com/products/skincare,Skincare,klaviyo,email,april_loyalty,3,0.00,0
+ge_00193,view_item,2026-04-23 21:26:50,upid_1007,sid_c_007_3,https://shop.example.com/products/hydration-serum,Hydration Serum,klaviyo,email,april_loyalty,3,58.00,1
+ge_00194,add_to_cart,2026-04-23 21:28:20,upid_1007,sid_c_007_3,https://shop.example.com/cart,Cart,klaviyo,email,april_loyalty,3,58.00,1
+ge_00195,begin_checkout,2026-04-23 21:29:20,upid_1007,sid_c_007_3,https://shop.example.com/checkout,Checkout,klaviyo,email,april_loyalty,3,58.00,1
+ge_00196,purchase,2026-04-23 21:30:30,upid_1007,sid_c_007_3,https://shop.example.com/checkout/thank-you,Thank you,klaviyo,email,april_loyalty,3,58.00,1
+ge_00197,session_start,2026-04-26 07:59:30,upid_1008,sid_c_008_3,https://shop.example.com/,Home,klaviyo,email,april_loyalty,3,0.00,0
+ge_00198,page_view,2026-04-26 07:59:50,upid_1008,sid_c_008_3,https://shop.example.com/,Home,klaviyo,email,april_loyalty,3,0.00,0
+ge_00199,page_view,2026-04-26 08:00:50,upid_1008,sid_c_008_3,https://shop.example.com/products/skincare,Skincare,klaviyo,email,april_loyalty,3,0.00,0
+ge_00200,view_item,2026-04-26 08:01:50,upid_1008,sid_c_008_3,https://shop.example.com/products/hydration-serum,Hydration Serum,klaviyo,email,april_loyalty,3,42.00,1
+ge_00201,add_to_cart,2026-04-26 08:03:20,upid_1008,sid_c_008_3,https://shop.example.com/cart,Cart,klaviyo,email,april_loyalty,3,42.00,1
+ge_00202,begin_checkout,2026-04-26 08:04:20,upid_1008,sid_c_008_3,https://shop.example.com/checkout,Checkout,klaviyo,email,april_loyalty,3,42.00,1
+ge_00203,purchase,2026-04-26 08:05:30,upid_1008,sid_c_008_3,https://shop.example.com/checkout/thank-you,Thank you,klaviyo,email,april_loyalty,3,42.00,1
+ge_00204,session_start,2026-04-29 17:12:30,upid_1006,sid_c_006_3,https://shop.example.com/,Home,meta_ads,paid_social,brand_awareness,3,0.00,0
+ge_00205,page_view,2026-04-29 17:12:50,upid_1006,sid_c_006_3,https://shop.example.com/,Home,meta_ads,paid_social,brand_awareness,3,0.00,0
+ge_00206,page_view,2026-04-29 17:13:50,upid_1006,sid_c_006_3,https://shop.example.com/products/skincare,Skincare,meta_ads,paid_social,brand_awareness,3,0.00,0
+ge_00207,view_item,2026-04-29 17:14:50,upid_1006,sid_c_006_3,https://shop.example.com/products/hydration-serum,Hydration Serum,meta_ads,paid_social,brand_awareness,3,28.00,1
+ge_00208,add_to_cart,2026-04-29 17:16:20,upid_1006,sid_c_006_3,https://shop.example.com/cart,Cart,meta_ads,paid_social,brand_awareness,3,28.00,1
+ge_00209,begin_checkout,2026-04-29 17:17:20,upid_1006,sid_c_006_3,https://shop.example.com/checkout,Checkout,meta_ads,paid_social,brand_awareness,3,28.00,1
+ge_00210,purchase,2026-04-29 17:18:30,upid_1006,sid_c_006_3,https://shop.example.com/checkout/thank-you,Thank you,meta_ads,paid_social,brand_awareness,3,28.00,1
+ge_00211,session_start,2026-01-28 10:00:00,upid_1001,sid_nc_000,https://shop.example.com/,Home,meta_ads,paid_social,q1_prospecting,5,0.00,0
+ge_00212,page_view,2026-01-28 10:00:15,upid_1001,sid_nc_000,https://shop.example.com/,Home,meta_ads,paid_social,q1_prospecting,5,0.00,0
+ge_00213,page_view,2026-01-28 10:01:00,upid_1001,sid_nc_000,https://shop.example.com/products/skincare,Skincare,meta_ads,paid_social,q1_prospecting,5,0.00,0
+ge_00214,view_item,2026-01-28 10:02:00,upid_1001,sid_nc_000,https://shop.example.com/products/retinol-night-cream,Retinol Night Cream,meta_ads,paid_social,q1_prospecting,5,58.00,1
+ge_00215,session_start,2026-02-02 11:30:00,upid_1002,sid_nc_001,https://shop.example.com/,Home,meta_ads,paid_social,q1_prospecting,5,0.00,0
+ge_00216,page_view,2026-02-02 11:30:15,upid_1002,sid_nc_001,https://shop.example.com/,Home,meta_ads,paid_social,q1_prospecting,5,0.00,0
+ge_00217,page_view,2026-02-02 11:31:00,upid_1002,sid_nc_001,https://shop.example.com/products/skincare,Skincare,meta_ads,paid_social,q1_prospecting,5,0.00,0
+ge_00218,session_start,2026-02-07 07:15:00,upid_1003,sid_nc_002,https://shop.example.com/,Home,klaviyo,email,welcome_series,4,0.00,0
+ge_00219,page_view,2026-02-07 07:15:15,upid_1003,sid_nc_002,https://shop.example.com/,Home,klaviyo,email,welcome_series,4,0.00,0
+ge_00220,page_view,2026-02-07 07:16:00,upid_1003,sid_nc_002,https://shop.example.com/products/skincare,Skincare,klaviyo,email,welcome_series,4,0.00,0
+ge_00221,session_start,2026-02-08 21:00:00,upid_1004,sid_nc_003,https://shop.example.com/,Home,meta_ads,paid_social,q1_prospecting,4,0.00,0
+ge_00222,page_view,2026-02-08 21:00:15,upid_1004,sid_nc_003,https://shop.example.com/,Home,meta_ads,paid_social,q1_prospecting,4,0.00,0
+ge_00223,page_view,2026-02-08 21:01:00,upid_1004,sid_nc_003,https://shop.example.com/products/skincare,Skincare,meta_ads,paid_social,q1_prospecting,4,0.00,0
+ge_00224,view_item,2026-02-08 21:02:00,upid_1004,sid_nc_003,https://shop.example.com/products/retinol-night-cream,Retinol Night Cream,meta_ads,paid_social,q1_prospecting,4,58.00,1
+ge_00225,session_start,2026-02-11 09:45:00,upid_1005,sid_nc_004,https://shop.example.com/,Home,google,organic,(not set),4,0.00,0
+ge_00226,page_view,2026-02-11 09:45:15,upid_1005,sid_nc_004,https://shop.example.com/,Home,google,organic,(not set),4,0.00,0
+ge_00227,page_view,2026-02-11 09:46:00,upid_1005,sid_nc_004,https://shop.example.com/products/skincare,Skincare,google,organic,(not set),4,0.00,0
+ge_00228,session_start,2026-02-20 18:00:00,upid_1006,sid_nc_005,https://shop.example.com/,Home,meta_ads,paid_social,q1_retargeting,4,0.00,0
+ge_00229,page_view,2026-02-20 18:00:15,upid_1006,sid_nc_005,https://shop.example.com/,Home,meta_ads,paid_social,q1_retargeting,4,0.00,0
+ge_00230,page_view,2026-02-20 18:01:00,upid_1006,sid_nc_005,https://shop.example.com/products/skincare,Skincare,meta_ads,paid_social,q1_retargeting,4,0.00,0
+ge_00231,session_start,2026-02-21 15:30:00,upid_1007,sid_nc_006,https://shop.example.com/,Home,(direct),(none),(not set),4,0.00,0
+ge_00232,page_view,2026-02-21 15:30:15,upid_1007,sid_nc_006,https://shop.example.com/,Home,(direct),(none),(not set),4,0.00,0
+ge_00233,page_view,2026-02-21 15:31:00,upid_1007,sid_nc_006,https://shop.example.com/products/skincare,Skincare,(direct),(none),(not set),4,0.00,0
+ge_00234,view_item,2026-02-21 15:32:00,upid_1007,sid_nc_006,https://shop.example.com/products/retinol-night-cream,Retinol Night Cream,(direct),(none),(not set),4,58.00,1
+ge_00235,session_start,2026-02-26 12:00:00,upid_1008,sid_nc_007,https://shop.example.com/,Home,meta_ads,paid_social,q1_prospecting,4,0.00,0
+ge_00236,page_view,2026-02-26 12:00:15,upid_1008,sid_nc_007,https://shop.example.com/,Home,meta_ads,paid_social,q1_prospecting,4,0.00,0
+ge_00237,page_view,2026-02-26 12:01:00,upid_1008,sid_nc_007,https://shop.example.com/products/skincare,Skincare,meta_ads,paid_social,q1_prospecting,4,0.00,0
+ge_00238,session_start,2026-03-01 10:15:00,upid_1009,sid_nc_008,https://shop.example.com/,Home,meta_ads,paid_social,q1_prospecting,3,0.00,0
+ge_00239,page_view,2026-03-01 10:15:15,upid_1009,sid_nc_008,https://shop.example.com/,Home,meta_ads,paid_social,q1_prospecting,3,0.00,0
+ge_00240,page_view,2026-03-01 10:16:00,upid_1009,sid_nc_008,https://shop.example.com/products/skincare,Skincare,meta_ads,paid_social,q1_prospecting,3,0.00,0
+ge_00241,session_start,2026-03-07 16:00:00,upid_1010,sid_nc_009,https://shop.example.com/,Home,meta_ads,paid_social,q1_prospecting,3,0.00,0
+ge_00242,page_view,2026-03-07 16:00:15,upid_1010,sid_nc_009,https://shop.example.com/,Home,meta_ads,paid_social,q1_prospecting,3,0.00,0
+ge_00243,page_view,2026-03-07 16:01:00,upid_1010,sid_nc_009,https://shop.example.com/products/skincare,Skincare,meta_ads,paid_social,q1_prospecting,3,0.00,0
+ge_00244,view_item,2026-03-07 16:02:00,upid_1010,sid_nc_009,https://shop.example.com/products/retinol-night-cream,Retinol Night Cream,meta_ads,paid_social,q1_prospecting,3,58.00,1
+ge_00245,session_start,2026-03-11 18:00:00,upid_1001,sid_nc_010,https://shop.example.com/,Home,klaviyo,email,march_restock,6,0.00,0
+ge_00246,page_view,2026-03-11 18:00:15,upid_1001,sid_nc_010,https://shop.example.com/,Home,klaviyo,email,march_restock,6,0.00,0
+ge_00247,page_view,2026-03-11 18:01:00,upid_1001,sid_nc_010,https://shop.example.com/products/skincare,Skincare,klaviyo,email,march_restock,6,0.00,0
+ge_00248,session_start,2026-03-04 09:00:00,upid_1003,sid_nc_011,https://shop.example.com/,Home,google,organic,(not set),5,0.00,0
+ge_00249,page_view,2026-03-04 09:00:15,upid_1003,sid_nc_011,https://shop.example.com/,Home,google,organic,(not set),5,0.00,0
+ge_00250,page_view,2026-03-04 09:01:00,upid_1003,sid_nc_011,https://shop.example.com/products/skincare,Skincare,google,organic,(not set),5,0.00,0
+ge_00251,session_start,2026-03-27 20:00:00,upid_1006,sid_nc_012,https://shop.example.com/,Home,meta_ads,paid_social,brand_awareness,5,0.00,0
+ge_00252,page_view,2026-03-27 20:00:15,upid_1006,sid_nc_012,https://shop.example.com/,Home,meta_ads,paid_social,brand_awareness,5,0.00,0
+ge_00253,page_view,2026-03-27 20:01:00,upid_1006,sid_nc_012,https://shop.example.com/products/skincare,Skincare,meta_ads,paid_social,brand_awareness,5,0.00,0
+ge_00254,view_item,2026-03-27 20:02:00,upid_1006,sid_nc_012,https://shop.example.com/products/retinol-night-cream,Retinol Night Cream,meta_ads,paid_social,brand_awareness,5,58.00,1
+ge_00255,session_start,2026-04-03 11:00:00,upid_1008,sid_nc_013,https://shop.example.com/,Home,meta_ads,paid_social,q1_retargeting,5,0.00,0
+ge_00256,page_view,2026-04-03 11:00:15,upid_1008,sid_nc_013,https://shop.example.com/,Home,meta_ads,paid_social,q1_retargeting,5,0.00,0
+ge_00257,page_view,2026-04-03 11:01:00,upid_1008,sid_nc_013,https://shop.example.com/products/skincare,Skincare,meta_ads,paid_social,q1_retargeting,5,0.00,0
+ge_00258,session_start,2026-04-08 15:00:00,upid_1002,sid_nc_014,https://shop.example.com/,Home,meta_ads,paid_social,q1_retargeting,6,0.00,0
+ge_00259,page_view,2026-04-08 15:00:15,upid_1002,sid_nc_014,https://shop.example.com/,Home,meta_ads,paid_social,q1_retargeting,6,0.00,0
+ge_00260,page_view,2026-04-08 15:01:00,upid_1002,sid_nc_014,https://shop.example.com/products/skincare,Skincare,meta_ads,paid_social,q1_retargeting,6,0.00,0
+ge_00261,session_start,2026-04-09 10:30:00,upid_1004,sid_nc_015,https://shop.example.com/,Home,klaviyo,email,april_loyalty,5,0.00,0
+ge_00262,page_view,2026-04-09 10:30:15,upid_1004,sid_nc_015,https://shop.example.com/,Home,klaviyo,email,april_loyalty,5,0.00,0
+ge_00263,page_view,2026-04-09 10:31:00,upid_1004,sid_nc_015,https://shop.example.com/products/skincare,Skincare,klaviyo,email,april_loyalty,5,0.00,0
+ge_00264,view_item,2026-04-09 10:32:00,upid_1004,sid_nc_015,https://shop.example.com/products/retinol-night-cream,Retinol Night Cream,klaviyo,email,april_loyalty,5,58.00,1
+ge_00265,session_start,2026-04-12 19:00:00,upid_1009,sid_nc_016,https://shop.example.com/,Home,meta_ads,paid_social,brand_awareness,4,0.00,0
+ge_00266,page_view,2026-04-12 19:00:15,upid_1009,sid_nc_016,https://shop.example.com/,Home,meta_ads,paid_social,brand_awareness,4,0.00,0
+ge_00267,page_view,2026-04-12 19:01:00,upid_1009,sid_nc_016,https://shop.example.com/products/skincare,Skincare,meta_ads,paid_social,brand_awareness,4,0.00,0
+ge_00268,session_start,2026-04-18 14:00:00,upid_1010,sid_nc_017,https://shop.example.com/,Home,meta_ads,paid_social,q1_retargeting,4,0.00,0
+ge_00269,page_view,2026-04-18 14:00:15,upid_1010,sid_nc_017,https://shop.example.com/,Home,meta_ads,paid_social,q1_retargeting,4,0.00,0
+ge_00270,page_view,2026-04-18 14:01:00,upid_1010,sid_nc_017,https://shop.example.com/products/skincare,Skincare,meta_ads,paid_social,q1_retargeting,4,0.00,0
+ge_00271,session_start,2026-04-22 08:00:00,upid_1005,sid_nc_018,https://shop.example.com/,Home,klaviyo,email,april_loyalty,5,0.00,0
+ge_00272,page_view,2026-04-22 08:00:15,upid_1005,sid_nc_018,https://shop.example.com/,Home,klaviyo,email,april_loyalty,5,0.00,0
+ge_00273,page_view,2026-04-22 08:01:00,upid_1005,sid_nc_018,https://shop.example.com/products/skincare,Skincare,klaviyo,email,april_loyalty,5,0.00,0
+ge_00274,view_item,2026-04-22 08:02:00,upid_1005,sid_nc_018,https://shop.example.com/products/retinol-night-cream,Retinol Night Cream,klaviyo,email,april_loyalty,5,58.00,1
+ge_00275,session_start,2026-04-28 17:00:00,upid_1007,sid_nc_019,https://shop.example.com/,Home,google,organic,(not set),5,0.00,0
+ge_00276,page_view,2026-04-28 17:00:15,upid_1007,sid_nc_019,https://shop.example.com/,Home,google,organic,(not set),5,0.00,0
+ge_00277,page_view,2026-04-28 17:01:00,upid_1007,sid_nc_019,https://shop.example.com/products/skincare,Skincare,google,organic,(not set),5,0.00,0

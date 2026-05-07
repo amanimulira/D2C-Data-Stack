@@ -1,0 +1,36 @@
+order_line_id,order_id,product_id,sku,title,quantity,price,total_discount
+ol_60001,o_5001,p_101,HS-030,Hydration Serum 30ml,1,48.00,0.00
+ol_60002,o_5001,p_104,SPF-050,Daily SPF 50,1,28.00,0.00
+ol_60003,o_5002,p_102,VC-150,Vitamin C Cleanser,1,32.00,0.00
+ol_60004,o_5003,p_108,TK-BUNDLE,Travel Kit,1,65.00,5.00
+ol_60005,o_5004,p_103,RN-050,Retinol Night Cream,1,58.00,0.00
+ol_60006,o_5004,p_105,ER-015,Eye Recovery Gel,1,42.00,0.00
+ol_60007,o_5005,p_106,BL-250,Body Lotion 250ml,2,24.00,0.00
+ol_60008,o_5006,p_101,HS-030,Hydration Serum 30ml,1,48.00,0.00
+ol_60009,o_5007,p_107,LB-TRIO,Lip Balm Trio,2,18.00,3.60
+ol_60010,o_5008,p_104,SPF-050,Daily SPF 50,1,28.00,0.00
+ol_60011,o_5008,p_107,LB-TRIO,Lip Balm Trio,1,18.00,0.00
+ol_60012,o_5009,p_103,RN-050,Retinol Night Cream,1,58.00,0.00
+ol_60013,o_5010,p_108,TK-BUNDLE,Travel Kit,1,65.00,6.50
+ol_60014,o_5011,p_102,VC-150,Vitamin C Cleanser,1,32.00,0.00
+ol_60015,o_5011,p_104,SPF-050,Daily SPF 50,1,28.00,0.00
+ol_60016,o_5012,p_106,BL-250,Body Lotion 250ml,1,24.00,0.00
+ol_60017,o_5013,p_101,HS-030,Hydration Serum 30ml,1,48.00,0.00
+ol_60018,o_5014,p_107,LB-TRIO,Lip Balm Trio,1,18.00,0.00
+ol_60019,o_5015,p_103,RN-050,Retinol Night Cream,1,58.00,5.80
+ol_60020,o_5016,p_105,ER-015,Eye Recovery Gel,1,42.00,0.00
+ol_60021,o_5017,p_104,SPF-050,Daily SPF 50,1,28.00,0.00
+ol_60022,o_5018,p_108,TK-BUNDLE,Travel Kit,1,65.00,0.00
+ol_60023,o_5019,p_106,BL-250,Body Lotion 250ml,1,24.00,0.00
+ol_60024,o_5020,p_101,HS-030,Hydration Serum 30ml,1,48.00,0.00
+ol_60025,o_5020,p_107,LB-TRIO,Lip Balm Trio,1,18.00,0.00
+ol_60026,o_5021,p_103,RN-050,Retinol Night Cream,1,58.00,0.00
+ol_60027,o_5022,p_102,VC-150,Vitamin C Cleanser,1,32.00,0.00
+ol_60028,o_5023,p_108,TK-BUNDLE,Travel Kit,1,65.00,6.50
+ol_60029,o_5024,p_104,SPF-050,Daily SPF 50,1,28.00,0.00
+ol_60030,o_5025,p_106,BL-250,Body Lotion 250ml,1,24.00,0.00
+ol_60031,o_5026,p_101,HS-030,Hydration Serum 30ml,1,48.00,0.00
+ol_60032,o_5027,p_107,LB-TRIO,Lip Balm Trio,2,18.00,0.00
+ol_60033,o_5028,p_103,RN-050,Retinol Night Cream,1,58.00,0.00
+ol_60034,o_5029,p_105,ER-015,Eye Recovery Gel,1,42.00,0.00
+ol_60035,o_5030,p_104,SPF-050,Daily SPF 50,1,28.00,0.00

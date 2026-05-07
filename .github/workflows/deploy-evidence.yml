@@ -1,0 +1,95 @@
+name: Deploy Evidence dashboard
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # ----- 1. Build the dbt warehouse on DuckDB -----
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: Install dbt
+        run: pip install -r requirements.txt
+
+      - name: Configure dbt profile
+        env:
+          DBT_PROFILES_DIR: ${{ github.workspace }}/.ci
+        run: |
+          mkdir -p .ci
+          cat > .ci/profiles.yml <<'EOF'
+          d2c_stack:
+            target: duckdb
+            outputs:
+              duckdb:
+                type: duckdb
+                path: d2c_stack.duckdb
+                threads: 4
+          EOF
+
+      - name: dbt deps + seed + build
+        env:
+          DBT_PROFILES_DIR: ${{ github.workspace }}/.ci
+        run: |
+          dbt deps
+          dbt seed --target duckdb
+          dbt build --target duckdb --exclude resource_type:seed
+
+      # ----- 2. Build the Evidence static site -----
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+          cache-dependency-path: bi/package-lock.json
+
+      - name: Install Evidence dependencies
+        working-directory: bi
+        run: npm ci --no-audit --no-fund
+
+      - name: Cache mart queries (Evidence sources)
+        working-directory: bi
+        run: npm run sources
+
+      - name: Build Evidence static site
+        working-directory: bi
+        env:
+          # Subpath where this site is served — `<repo>/` for project pages.
+          # Comment out / blank if deploying to a custom domain at root.
+          BASE_PATH: /D2C-Data-Stack
+        run: npm run build
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: bi/build
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

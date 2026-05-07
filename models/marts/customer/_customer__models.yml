@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: customer_ltv
+    description: Per-customer cumulative revenue & contribution margin at 30/60/90/180/365-day windows post-acquisition.
+    columns:
+      - name: customer_id
+        tests: [unique, not_null]
+      - name: ltv_revenue_total
+        tests: [not_null]
+
+  - name: customer_cohort_retention
+    description: Monthly acquisition cohort × months-since-acquisition grid with retention rate.
+    columns:
+      - name: cohort_month
+        tests: [not_null]
+      - name: months_since_acquisition
+        tests: [not_null]
+      - name: retention_rate
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between: { min_value: 0, max_value: 1 }
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns: [cohort_month, months_since_acquisition]
+
+  - name: customer_rfm
+    description: RFM (Recency, Frequency, Monetary) scoring with named lifecycle segments suitable for Klaviyo.
+    columns:
+      - name: customer_id
+        tests: [unique, not_null]
+      - name: rfm_segment
+        tests:
+          - accepted_values:
+              values: [Champions, Loyal, New, 'At Risk', Hibernating, Active]

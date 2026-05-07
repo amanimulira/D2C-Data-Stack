@@ -1,0 +1,1 @@
+select * from marts_customer.customer_ltv

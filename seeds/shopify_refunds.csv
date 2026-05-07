@@ -1,0 +1,4 @@
+refund_id,order_id,created_at,refund_amount,reason
+r_9001,o_5023,2026-04-12 09:30:00,32.50,customer_request
+r_9002,o_5004,2026-02-18 14:00:00,42.00,defective_product
+r_9003,o_5018,2026-04-04 11:00:00,12.00,partial_return

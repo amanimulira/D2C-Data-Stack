@@ -1,0 +1,90 @@
+event_id,profile_id,email,event_name,event_at,event_value,campaign_id,flow_id,message_id,attributed_order_id
+ke_00001,kp_001,maya.chen@example.com,Subscribed to List,2026-01-28 09:50:00,0.00,,,,
+ke_00002,kp_002,liam.patel@example.com,Subscribed to List,2026-02-04 09:00:00,0.00,,,,
+ke_00003,kp_003,aisha.okafor@example.com,Subscribed to List,2026-02-06 18:30:00,0.00,,,,
+ke_00004,kp_004,noah.rivera@example.com,Subscribed to List,2026-02-09 13:50:00,0.00,,,,
+ke_00005,kp_005,priya.singh@example.com,Subscribed to List,2026-02-11 11:20:00,0.00,,,,
+ke_00006,kp_006,jonas.mueller@example.com,Subscribed to List,2026-02-13 16:00:00,0.00,,,,
+ke_00007,kp_007,sofia.rossi@example.com,Subscribed to List,2026-02-21 20:40:00,0.00,,,,
+ke_00008,kp_008,kenji.tanaka@example.com,Subscribed to List,2026-02-27 07:30:00,0.00,,,,
+ke_00009,kp_009,amara.diallo@example.com,Subscribed to List,2026-03-01 13:00:00,0.00,,,,
+ke_00010,kp_010,eleanor.wright@example.com,Subscribed to List,2026-03-07 18:45:00,0.00,,,,
+ke_00100,kp_001,maya.chen@example.com,Received Email,2026-01-28 10:05:00,0.00,,flow_001,m_w001,
+ke_00101,kp_002,liam.patel@example.com,Received Email,2026-02-04 09:15:00,0.00,,flow_001,m_w002,
+ke_00102,kp_003,aisha.okafor@example.com,Received Email,2026-02-06 18:45:00,0.00,,flow_001,m_w003,
+ke_00103,kp_004,noah.rivera@example.com,Received Email,2026-02-09 14:05:00,0.00,,flow_001,m_w004,
+ke_00104,kp_006,jonas.mueller@example.com,Received Email,2026-02-13 16:15:00,0.00,,flow_001,m_w006,
+ke_00105,kp_007,sofia.rossi@example.com,Received Email,2026-02-21 20:55:00,0.00,,flow_001,m_w007,
+ke_00106,kp_008,kenji.tanaka@example.com,Received Email,2026-02-27 07:45:00,0.00,,flow_001,m_w008,
+ke_00107,kp_009,amara.diallo@example.com,Received Email,2026-03-01 13:15:00,0.00,,flow_001,m_w009,
+ke_00200,kp_001,maya.chen@example.com,Opened Email,2026-01-28 11:30:00,0.00,,flow_001,m_w001,
+ke_00201,kp_003,aisha.okafor@example.com,Opened Email,2026-02-07 08:10:00,0.00,,flow_001,m_w003,
+ke_00202,kp_004,noah.rivera@example.com,Opened Email,2026-02-09 19:20:00,0.00,,flow_001,m_w004,
+ke_00203,kp_001,maya.chen@example.com,Clicked Email,2026-01-28 11:32:00,0.00,,flow_001,m_w001,
+ke_00204,kp_003,aisha.okafor@example.com,Clicked Email,2026-02-07 08:12:00,0.00,,flow_001,m_w003,
+ke_00300,kp_001,maya.chen@example.com,Received Email,2026-03-04 09:00:00,0.00,camp_002,,m_r001,
+ke_00301,kp_002,liam.patel@example.com,Received Email,2026-03-04 09:00:00,0.00,camp_002,,m_r002,
+ke_00302,kp_003,aisha.okafor@example.com,Received Email,2026-03-04 09:00:00,0.00,camp_002,,m_r003,
+ke_00303,kp_004,noah.rivera@example.com,Received Email,2026-03-04 09:00:00,0.00,camp_002,,m_r004,
+ke_00304,kp_005,priya.singh@example.com,Received Email,2026-03-04 09:00:00,0.00,camp_002,,m_r005,
+ke_00305,kp_006,jonas.mueller@example.com,Received Email,2026-03-04 09:00:00,0.00,camp_002,,m_r006,
+ke_00306,kp_007,sofia.rossi@example.com,Received Email,2026-03-04 09:00:00,0.00,camp_002,,m_r007,
+ke_00307,kp_008,kenji.tanaka@example.com,Received Email,2026-03-04 09:00:00,0.00,camp_002,,m_r008,
+ke_00310,kp_001,maya.chen@example.com,Opened Email,2026-03-04 14:22:00,0.00,camp_002,,m_r001,
+ke_00311,kp_003,aisha.okafor@example.com,Opened Email,2026-03-04 18:45:00,0.00,camp_002,,m_r003,
+ke_00312,kp_004,noah.rivera@example.com,Opened Email,2026-03-09 09:18:00,0.00,camp_002,,m_r004,
+ke_00313,kp_006,jonas.mueller@example.com,Opened Email,2026-03-21 11:00:00,0.00,camp_002,,m_r006,
+ke_00314,kp_001,maya.chen@example.com,Clicked Email,2026-03-12 11:00:00,0.00,camp_002,,m_r001,
+ke_00315,kp_003,aisha.okafor@example.com,Clicked Email,2026-03-05 10:15:00,0.00,camp_002,,m_r003,
+ke_00400,kp_001,maya.chen@example.com,Received Email,2026-04-01 09:00:00,0.00,camp_003,,m_l001,
+ke_00401,kp_002,liam.patel@example.com,Received Email,2026-04-01 09:00:00,0.00,camp_003,,m_l002,
+ke_00402,kp_003,aisha.okafor@example.com,Received Email,2026-04-01 09:00:00,0.00,camp_003,,m_l003,
+ke_00403,kp_004,noah.rivera@example.com,Received Email,2026-04-01 09:00:00,0.00,camp_003,,m_l004,
+ke_00404,kp_005,priya.singh@example.com,Received Email,2026-04-01 09:00:00,0.00,camp_003,,m_l005,
+ke_00405,kp_006,jonas.mueller@example.com,Received Email,2026-04-01 09:00:00,0.00,camp_003,,m_l006,
+ke_00406,kp_007,sofia.rossi@example.com,Received Email,2026-04-01 09:00:00,0.00,camp_003,,m_l007,
+ke_00407,kp_008,kenji.tanaka@example.com,Received Email,2026-04-01 09:00:00,0.00,camp_003,,m_l008,
+ke_00408,kp_009,amara.diallo@example.com,Received Email,2026-04-01 09:00:00,0.00,camp_003,,m_l009,
+ke_00409,kp_010,eleanor.wright@example.com,Received Email,2026-04-01 09:00:00,0.00,camp_003,,m_l010,
+ke_00420,kp_001,maya.chen@example.com,Opened Email,2026-04-08 10:30:00,0.00,camp_003,,m_l001,
+ke_00421,kp_003,aisha.okafor@example.com,Opened Email,2026-04-11 13:50:00,0.00,camp_003,,m_l003,
+ke_00422,kp_004,noah.rivera@example.com,Opened Email,2026-04-14 08:50:00,0.00,camp_003,,m_l004,
+ke_00423,kp_005,priya.singh@example.com,Opened Email,2026-04-17 17:55:00,0.00,camp_003,,m_l005,
+ke_00424,kp_009,amara.diallo@example.com,Opened Email,2026-04-02 11:45:00,0.00,camp_003,,m_l009,
+ke_00425,kp_001,maya.chen@example.com,Clicked Email,2026-04-08 11:40:00,0.00,camp_003,,m_l001,
+ke_00426,kp_009,amara.diallo@example.com,Clicked Email,2026-04-02 11:55:00,0.00,camp_003,,m_l009,
+ke_00427,kp_007,sofia.rossi@example.com,Clicked Email,2026-04-23 21:15:00,0.00,camp_003,,m_l007,
+ke_05001,kp_001,maya.chen@example.com,Placed Order,2026-02-03 14:22:00,76.00,,,,o_5001
+ke_05002,kp_002,liam.patel@example.com,Placed Order,2026-02-05 11:15:00,32.00,,,,o_5002
+ke_05003,kp_003,aisha.okafor@example.com,Placed Order,2026-02-07 09:48:00,65.00,,flow_001,m_w003,o_5003
+ke_05004,kp_004,noah.rivera@example.com,Placed Order,2026-02-10 17:30:00,100.00,,,,o_5004
+ke_05005,kp_005,priya.singh@example.com,Placed Order,2026-02-12 08:55:00,48.00,,,,o_5005
+ke_05006,kp_006,jonas.mueller@example.com,Placed Order,2026-02-14 16:08:00,48.00,,,,o_5006
+ke_05007,kp_001,maya.chen@example.com,Placed Order,2026-02-18 13:40:00,36.00,,flow_001,m_w001,o_5007
+ke_05008,kp_007,sofia.rossi@example.com,Placed Order,2026-02-22 20:55:00,46.00,,,,o_5008
+ke_05009,kp_002,liam.patel@example.com,Placed Order,2026-02-25 12:18:00,58.00,,flow_001,m_w002,o_5009
+ke_05010,kp_008,kenji.tanaka@example.com,Placed Order,2026-02-28 07:42:00,65.00,,,,o_5010
+ke_05011,kp_009,amara.diallo@example.com,Placed Order,2026-03-02 13:09:00,60.00,,,,o_5011
+ke_05012,kp_003,aisha.okafor@example.com,Placed Order,2026-03-05 10:22:00,24.00,camp_002,,m_r003,o_5012
+ke_05013,kp_010,eleanor.wright@example.com,Placed Order,2026-03-08 19:00:00,48.00,,,,o_5013
+ke_05014,kp_004,noah.rivera@example.com,Placed Order,2026-03-10 14:33:00,18.00,camp_002,,m_r004,o_5014
+ke_05015,kp_001,maya.chen@example.com,Placed Order,2026-03-12 11:11:00,58.00,camp_002,,m_r001,o_5015
+ke_05016,kp_005,priya.singh@example.com,Placed Order,2026-03-15 15:25:00,42.00,camp_002,,m_r005,o_5016
+ke_05017,kp_002,liam.patel@example.com,Placed Order,2026-03-18 08:48:00,28.00,,,,o_5017
+ke_05018,kp_006,jonas.mueller@example.com,Placed Order,2026-03-22 17:55:00,65.00,camp_002,,m_r006,o_5018
+ke_05019,kp_007,sofia.rossi@example.com,Placed Order,2026-03-25 10:00:00,24.00,,,,o_5019
+ke_05020,kp_008,kenji.tanaka@example.com,Placed Order,2026-03-28 09:15:00,66.00,,,,o_5020
+ke_05021,kp_009,amara.diallo@example.com,Placed Order,2026-04-02 12:00:00,58.00,camp_003,,m_l009,o_5021
+ke_05022,kp_010,eleanor.wright@example.com,Placed Order,2026-04-05 16:33:00,32.00,,,,o_5022
+ke_05023,kp_001,maya.chen@example.com,Placed Order,2026-04-08 11:50:00,65.00,camp_003,,m_l001,o_5023
+ke_05024,kp_003,aisha.okafor@example.com,Placed Order,2026-04-11 14:14:00,28.00,camp_003,,m_l003,o_5024
+ke_05025,kp_004,noah.rivera@example.com,Placed Order,2026-04-14 09:08:00,24.00,camp_003,,m_l004,o_5025
+ke_05026,kp_005,priya.singh@example.com,Placed Order,2026-04-17 18:22:00,48.00,camp_003,,m_l005,o_5026
+ke_05027,kp_002,liam.patel@example.com,Placed Order,2026-04-20 13:00:00,36.00,camp_003,,m_l002,o_5027
+ke_05028,kp_007,sofia.rossi@example.com,Placed Order,2026-04-23 21:30:00,58.00,camp_003,,m_l007,o_5028
+ke_05029,kp_008,kenji.tanaka@example.com,Placed Order,2026-04-26 08:05:00,42.00,camp_003,,m_l008,o_5029
+ke_05030,kp_006,jonas.mueller@example.com,Placed Order,2026-04-29 17:18:00,28.00,,,,o_5030
+ke_06001,kp_004,noah.rivera@example.com,Started Checkout,2026-02-10 17:25:00,100.00,,,,
+ke_06002,kp_006,jonas.mueller@example.com,Started Checkout,2026-03-22 17:50:00,65.00,,,,
+ke_06003,kp_005,priya.singh@example.com,Started Checkout,2026-03-12 14:10:00,42.00,,flow_002,m_ac001,
+ke_06004,kp_009,amara.diallo@example.com,Started Checkout,2026-04-02 11:55:00,58.00,,,,

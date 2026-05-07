@@ -1,0 +1,85 @@
+version: 2
+
+models:
+  - name: stg_shopify__orders
+    description: |
+      One row per Shopify order. Lightly cleaned: empty UTM fields normalized to
+      `(direct)` / `(none)` / `(not set)` and a `has_refund` flag derived from
+      financial status.
+    columns:
+      - name: order_id
+        description: Primary key. Stable across the order lifecycle.
+        tests: [unique, not_null]
+      - name: customer_id
+        description: FK to stg_shopify__customers. Null for guest checkouts.
+      - name: ordered_at
+        description: Timestamp the order was created in Shopify.
+        tests: [not_null]
+      - name: order_total
+        description: Customer-paid amount in `currency` (subtotal − discount + tax + shipping).
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between: { min_value: 0 }
+      - name: order_subtotal
+        description: Sum of line item gross merchandise value before discount, tax, and shipping.
+      - name: utm_source
+        description: Marketing source captured at checkout. Used for last-touch attribution.
+      - name: financial_status
+        description: One of `paid`, `pending`, `refunded`, `partially_refunded`, `voided`.
+        tests:
+          - accepted_values:
+              values: ['paid','pending','refunded','partially_refunded','voided','authorized']
+
+  - name: stg_shopify__order_lines
+    description: One row per line item per order. Pre-computes net and gross line revenue.
+    columns:
+      - name: order_line_id
+        tests: [unique, not_null]
+      - name: order_id
+        tests:
+          - not_null
+          - relationships: { to: ref('stg_shopify__orders'), field: order_id }
+      - name: product_id
+        tests:
+          - relationships: { to: ref('stg_shopify__products'), field: product_id }
+      - name: quantity
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between: { min_value: 1 }
+      - name: net_line_revenue
+        description: Quantity × unit price − line-level discount. Excludes order-level discounts and shipping.
+
+  - name: stg_shopify__customers
+    description: |
+      Cleaned customer dimension. Email is normalized (lowercased, trimmed) so it
+      can be used as a deterministic identity key for joins to Klaviyo.
+    columns:
+      - name: customer_id
+        tests: [unique, not_null]
+      - name: email
+        description: Lowercased and trimmed via `normalize_email` macro.
+        tests: [not_null]
+        meta: {contains_pii: true}
+      - name: phone
+        meta: {contains_pii: true}
+
+  - name: stg_shopify__products
+    description: Product catalog with margin economics derived (unit margin, margin pct).
+    columns:
+      - name: product_id
+        tests: [unique, not_null]
+      - name: product_margin_pct
+        description: (price − cost) / price. Null when price is zero.
+
+  - name: stg_shopify__refunds
+    description: One row per refund event. Multiple refunds possible per order.
+    columns:
+      - name: refund_id
+        tests: [unique, not_null]
+      - name: order_id
+        tests:
+          - not_null
+          - relationships: { to: ref('stg_shopify__orders'), field: order_id }
+      - name: refund_amount
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between: { min_value: 0 }

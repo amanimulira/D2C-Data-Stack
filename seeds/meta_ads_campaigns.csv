@@ -1,0 +1,4 @@
+campaign_id,name,objective,status,daily_budget,utm_campaign,created_at
+mc_001,Q1 Prospecting - Skincare,OUTCOME_SALES,active,30.00,q1_prospecting,2026-01-15 09:00:00
+mc_002,Q1 Retargeting - Web Visitors,OUTCOME_SALES,active,18.00,q1_retargeting,2026-01-20 09:00:00
+mc_003,Brand Awareness Q1,OUTCOME_AWARENESS,active,10.00,brand_awareness,2026-01-25 09:00:00

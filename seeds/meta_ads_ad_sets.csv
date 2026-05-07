@@ -1,0 +1,4 @@
+ad_set_id,campaign_id,name,optimization_goal,status,created_at
+as_201,mc_001,US/UK Cold Audience - LAL 1%,OFFSITE_CONVERSIONS,active,2026-01-15 10:00:00
+as_202,mc_002,Web Visitors 30d - Excl Purchasers,OFFSITE_CONVERSIONS,active,2026-01-20 10:00:00
+as_203,mc_003,Broad Brand - 25-45 F,IMPRESSIONS,active,2026-01-25 10:00:00

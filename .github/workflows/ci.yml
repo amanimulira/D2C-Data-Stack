@@ -1,0 +1,71 @@
+name: dbt CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: dbt build (DuckDB)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: Install dbt
+        run: pip install -r requirements.txt
+
+      - name: Configure dbt profile
+        env:
+          DBT_PROFILES_DIR: ${{ github.workspace }}/.ci
+        run: |
+          mkdir -p .ci
+          cat > .ci/profiles.yml <<'EOF'
+          d2c_stack:
+            target: duckdb
+            outputs:
+              duckdb:
+                type: duckdb
+                path: d2c_stack.duckdb
+                threads: 4
+          EOF
+
+      - name: Install dbt packages
+        env:
+          DBT_PROFILES_DIR: ${{ github.workspace }}/.ci
+        run: dbt deps
+
+      - name: Load seeds
+        env:
+          DBT_PROFILES_DIR: ${{ github.workspace }}/.ci
+        run: dbt seed --target duckdb
+
+      - name: Build models and run tests
+        env:
+          DBT_PROFILES_DIR: ${{ github.workspace }}/.ci
+        run: dbt build --target duckdb --exclude resource_type:seed
+
+      - name: Generate docs
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        env:
+          DBT_PROFILES_DIR: ${{ github.workspace }}/.ci
+        run: dbt docs generate --target duckdb
+
+      - name: Upload docs artifact
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: actions/upload-artifact@v4
+        with:
+          name: dbt-docs
+          path: target/
+          retention-days: 14

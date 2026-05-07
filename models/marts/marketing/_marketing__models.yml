@@ -1,0 +1,47 @@
+version: 2
+
+models:
+  - name: fct_marketing_performance
+    description: |
+      Daily campaign-level performance with both platform-reported and last-touch
+      attribution side-by-side. The delta between the two columns is itself the
+      diagnostic — large platform ROAS with small last-touch ROAS often means
+      the platform is taking credit for view-through opens that did not drive
+      meaningful incremental purchases.
+    columns:
+      - name: date_day
+        tests: [not_null]
+      - name: campaign_id
+        tests: [not_null]
+      - name: spend
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between: { min_value: 0 }
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns: [date_day, platform, campaign_id]
+
+  - name: fct_attribution_first_touch
+    description: One row per order with the customer's *first-order* UTM as the credited channel.
+    columns:
+      - name: order_id
+        tests: [unique, not_null]
+      - name: first_touch_source
+        tests: [not_null]
+
+  - name: fct_attribution_last_touch
+    description: One row per order with the order's own UTM as the credited channel.
+    columns:
+      - name: order_id
+        tests: [unique, not_null]
+      - name: last_touch_source
+        tests: [not_null]
+
+  - name: fct_blended_roas
+    description: |
+      Daily blended ROAS / MER. Total revenue (across all channels) divided by
+      total paid spend (across all platforms). The headline marketing health
+      metric — robust to attribution disputes between platforms.
+    columns:
+      - name: date_day
+        tests: [unique, not_null]

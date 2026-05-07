@@ -1,0 +1,44 @@
+version: 2
+
+models:
+  - name: stg_meta_ads__campaigns
+    columns:
+      - name: campaign_id
+        tests: [unique, not_null]
+      - name: platform
+        description: Hardcoded `meta_ads` so this model can be unioned with other paid platforms (Google, TikTok, etc.).
+
+  - name: stg_meta_ads__ad_sets
+    columns:
+      - name: ad_set_id
+        tests: [unique, not_null]
+      - name: campaign_id
+        tests:
+          - relationships: { to: ref('stg_meta_ads__campaigns'), field: campaign_id }
+
+  - name: stg_meta_ads__ads
+    columns:
+      - name: ad_id
+        tests: [unique, not_null]
+      - name: ad_set_id
+        tests:
+          - relationships: { to: ref('stg_meta_ads__ad_sets'), field: ad_set_id }
+
+  - name: stg_meta_ads__ad_insights
+    description: |
+      Daily ad performance with derived per-row CTR, CPM, CPC, and Meta-reported ROAS.
+      `platform_reported_roas` reflects Meta's own attribution and tends to overstate
+      vs. last-touch attribution computed from order UTMs.
+    columns:
+      - name: date_day
+        tests: [not_null]
+      - name: campaign_id
+        tests:
+          - relationships: { to: ref('stg_meta_ads__campaigns'), field: campaign_id }
+      - name: spend
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between: { min_value: 0 }
+      - name: ctr
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between: { min_value: 0, max_value: 1 }

@@ -1,0 +1,50 @@
+version: 2
+
+sources:
+  - name: shopify
+    description: |
+      Raw Shopify data landed by Fivetran's Shopify connector (or equivalent ELT).
+      In production, freshness is monitored via dbt source freshness; ingestion is
+      typically every 15 minutes. In this reference implementation, the underlying
+      tables are materialized from CSV seeds.
+    schema: raw_shopify
+
+    freshness:
+      warn_after: { count: 6,  period: hour }
+      error_after: { count: 24, period: hour }
+    loaded_at_field: updated_at
+
+    tables:
+      - name: shopify_orders
+        identifier: shopify_orders
+        description: One row per Shopify order. Includes financial and fulfillment status, captured UTM parameters, and totals.
+        columns:
+          - name: order_id
+            tests: [unique, not_null]
+          - name: customer_id
+            description: FK to shopify_customers. Null for guest checkouts.
+
+      - name: shopify_order_lines
+        identifier: shopify_order_lines
+        description: One row per line item. Multiple lines per order.
+        columns:
+          - name: order_line_id
+            tests: [unique, not_null]
+          - name: order_id
+            tests: [not_null]
+
+      - name: shopify_customers
+        identifier: shopify_customers
+        description: Shopify customer master. Contains PII (email, phone) — handle with care.
+        loaded_at_field: updated_at
+        columns:
+          - name: customer_id
+            tests: [unique, not_null]
+
+      - name: shopify_products
+        identifier: shopify_products
+        description: Product catalog with cost-of-goods (COGS) used for margin calculation.
+
+      - name: shopify_refunds
+        identifier: shopify_refunds
+        description: Order-level refunds. Used to compute net revenue and contribution margin.
