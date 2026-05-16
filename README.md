@@ -5,7 +5,11 @@ brand actually has — **Shopify, Klaviyo, Meta Ads, GA4** — into the metrics 
 operator runs the business with: blended ROAS, contribution-margin CAC, LTV by
 acquisition cohort, payback period, retention curves.
 
-> **Live dashboard:** [amanimulira.github.io/D2C-Data-Stack](https://amanimulira.github.io/D2C-Data-Stack/) — every chart is one SQL query against a documented mart. Source in [`bi/`](bi/).
+> **Live dashboards** — same dbt marts, two presentation layers:
+> - [`d2c-data-stack.streamlit.app`](https://d2c-data-stack.streamlit.app/) — Streamlit, light/executive theme, Altair charts. Source in [`streamlit_app/`](streamlit_app/).
+> - [`amanimulira.github.io/D2C-Data-Stack`](https://amanimulira.github.io/D2C-Data-Stack/) — Evidence, static SvelteKit build on GitHub Pages. Source in [`bi/`](bi/).
+>
+> Every chart on every page is one SQL query against a documented, tested mart — nothing pre-aggregated, nothing hidden.
 
 | | |
 |---|---|
@@ -14,7 +18,7 @@ acquisition cohort, payback period, retention curves.
 | **Models** | 30+ (`staging` → `intermediate` → `marts/{core,marketing,customer}`) |
 | **Tests** | 100+ (schema · `dbt-expectations` distributional · custom singular · source freshness) |
 | **CI** | GitHub Actions runs `dbt build` against DuckDB on every PR — no warehouse credentials required |
-| **BI** | [Evidence](https://evidence.dev) static site — dbt build + Evidence build, deploys to GitHub Pages on push to `main` |
+| **BI** | Two dashboards over the same marts — [Streamlit](https://streamlit.io) (executive theme, Altair charts) on Streamlit Community Cloud, and [Evidence](https://evidence.dev) (static SvelteKit) on GitHub Pages |
 | **Runs locally** | `dbt build` end-to-end in <60s on DuckDB. Synthetic seeds included. |
 
 > Built as a credibility-grade reference — fork it, clone it, ship it. Every
@@ -185,7 +189,8 @@ D2C-Data-Stack/
 ├── tests/                           Custom singular tests (assertions)
 ├── analyses/                        monthly_business_review, cohort_payback_curve
 ├── docs/                            Architecture, modeling, business metric formulas
-├── bi/                              Evidence dashboard (static site, deploys to GitHub Pages)
+├── bi/                              Evidence dashboard — static SvelteKit, GitHub Pages
+├── streamlit_app/                   Streamlit dashboard — light/executive theme, Altair
 └── .github/workflows/
     ├── ci.yml                       dbt build on every PR
     └── deploy-evidence.yml          dbt build + Evidence build → GitHub Pages on push to main

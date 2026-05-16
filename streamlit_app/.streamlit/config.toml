@@ -1,0 +1,22 @@
+# Executive-report theme: restrained palette, light surfaces.
+# Custom typography and component styling are layered on via injected
+# CSS in lib/style.py so we can use serif headings without overriding
+# Streamlit's base sans-serif body text.
+
+[theme]
+base = "light"
+primaryColor = "#0F172A"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F8FAFC"
+textColor = "#0F172A"
+font = "sans serif"
+
+[server]
+headless = true
+
+[browser]
+gatherUsageStats = false
+
+[client]
+showSidebarNavigation = true
+toolbarMode = "minimal"
