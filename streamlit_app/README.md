@@ -38,10 +38,14 @@ Subsequent queries hit the cached DuckDB file directly.
    - **Repository**: `amanimulira/D2C-Data-Stack`
    - **Branch**: `main`
    - **Main file path**: `streamlit_app/Home.py`
-   - **Python version**: 3.11
 3. Under **Advanced settings → App URL**, pick the subdomain you want
    (e.g. `d2c-data-stack` → resolves to `d2c-data-stack.streamlit.app`).
 4. Click **Deploy**.
+
+The Python version (3.11) is pinned via the repo-root `.python-version`
+file. Don't override it in the deploy UI — `dbt-core 1.8` doesn't yet
+support Python 3.13+ and Pillow (pulled in by Streamlit) has no wheel
+for 3.14, so newer Python versions will fail to install.
 
 Streamlit Cloud reads `streamlit_app/requirements.txt` for Python deps
 and `streamlit_app/.streamlit/config.toml` for the theme. The first
